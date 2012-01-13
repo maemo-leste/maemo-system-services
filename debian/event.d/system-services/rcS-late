@@ -59,6 +59,12 @@ script
       echo "Seeding entropy pool"
       dd if=/dev/hwrng of=/dev/urandom bs=$URANDOM_POOLSZ count=1
     fi
+
+    # Data for the panic info driver
+    mount -t debugfs nodev /sys/kernel/debug
+    modprobe panic_info_buff
+    sleep 1
+    osso-product-info > /sys/kernel/debug/panic_info_buff
 end script
 
 normal exit 0

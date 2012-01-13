@@ -1,9 +1,15 @@
-upstart (0.3.8-56+0m5) unstable; urgency=low
+upstart (0.3.8-57+0m5) unstable; urgency=low
 
   * This entry has been added by BIFH queue processor
     Suffix +0m5 added to package revision
 
- -- pekka lundstrom <pekka.lundstrom@nokia.com>  Thu, 24 Sep 2009 12:06:26 +0300
+ -- Attiq Malik <ext-attiq.1.malik@nokia.com>  Tue, 10 Nov 2009 11:38:27 +0200
+
+upstart (0.3.8-57) unstable; urgency=low
+
+  * Load and feed panic info driver. Fixes: NB#143509
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Thu, 05 Nov 2009 11:42:41 +0200
 
 upstart (0.3.8-56) unstable; urgency=low
 
