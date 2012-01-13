@@ -1,0 +1,18 @@
+#!/bin/sh -e
+# remove old scripts if there
+
+ed=/etc/events.d
+rm -f rm $ed/21devlock $ed/10osso_startup_wizard $ed/25maemo-launcher
+
+# ensure all event scripts get replaced
+if [ -e /etc/event.replace.d/ ]; 
+then
+	cp -af /etc/event.replace.d/* /etc/event.d/
+fi
+rm -f /etc/event.d/memory
+rm -f /etc/event.d/mounts
+rm -f /etc/event.d/xsession-actdead
+
+# REVISIT: same for xsession.d scripts
+#DEBHELPER#
+exit 0

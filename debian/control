@@ -1,0 +1,33 @@
+Source: upstart
+Section: admin
+Priority: extra
+Maintainer: Pekka Lundstrom <pekka.lundstrom@nokia.com>
+Uploaders: Philippe De Swert <philippe.de-swert@nokia.com>
+Build-Depends: debhelper
+Standards-Version: 3.7.3
+
+Package: upstart
+Architecture: any
+Pre-Depends: ${shlibs:Depends}, sysvinit-utils (>= 2.86.ds1-23) | busybox (>= 3:1.6.1.legal-1osso8)
+Recommends: upstart-compat-sysv, upstart-logd, startup-tasks, system-services
+Conflicts: sysvinit
+Replaces: sysvinit
+Provides: sysvinit
+Description: event-based init daemon
+ upstart is a replacement for the /sbin/init daemon which handles
+ starting of tasks and services during boot, stopping them during
+ shutdown and supervising them while the system is running.
+
+Package: upstart-dev
+Architecture: any
+Description: dh_installupstart tool
+ This package contains a dh_installupstart a tool to simplify
+ deploying upstart
+
+Package: system-services
+Architecture: any
+Depends: upstart (>= 0.2.0), mini-rc | sysv-rc
+Replaces: upstart (<< 0.2.1-6)
+Description: definitions of essential system services
+ This package contains the definitions of services essential for the
+ normal operation of a Linux system.

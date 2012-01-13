@@ -1,0 +1,64 @@
+description "late rcS actions"
+
+start on started xomap
+stop on stopping bme
+
+console none
+
+script
+    # Generate fstab and mount /home
+    . /etc/default/mount-opts
+
+    fstab=/etc/fstab
+    tmp_fstab=/tmp/fstab
+
+    sfdisk -l /dev/mmcblk0 | awk \
+    	-v home_opts="$home_opts" -v fat_opts="$fat_opts" \
+	-f /usr/lib/genfstab.awk > $tmp_fstab
+
+    cmp -s $tmp_fstab $fstab || cp $tmp_fstab $fstab
+    rm -f $tmp_fstab
+
+    /bin/mount /home || echo "Failed to mount /home partition."
+
+    if [ ! -d /home/user ]
+    then
+      if [ -d /home/preinstalled ]
+      then
+        mv /home/preinstalled /home/user
+      else
+        mkdir /home/user
+      fi
+      cd /etc/skel
+      cp -a . /home/user
+      chown -R user:users /home/user
+    fi
+
+    # We can safely continue booting now.
+    initctl emit MOUNTS_OK
+
+    /sbin/swapon -a || echo "Failed to enable paging partition."
+
+    # Setup lowmem module
+    echo 32768  > /proc/sys/vm/lowmem_deny_watermark_pages
+    echo 98304  > /proc/sys/vm/lowmem_notify_high_pages
+    echo 131072 > /proc/sys/vm/lowmem_notify_low_pages
+    echo 1024   > /proc/sys/vm/lowmem_nr_decay_pages
+
+    # Exclude some UIDs from memory allocation denial.
+    # 30000 is messagebus, 30001 could be used by Matchbox
+    echo "30000 30001 30002 30003" > /proc/sys/vm/lowmem_allowed_uids
+
+    # Adjust flushing of memory card buffers
+    echo 40 > /proc/sys/vm/dirty_ratio
+    echo 10 > /proc/sys/vm/dirty_background_ratio
+
+    # Initialize PRNG pool with the HW RNG. Slow, but that's ok.
+    URANDOM_POOLSZ=512
+    if [ -e /dev/hwrng ]; then
+      echo "Seeding entropy pool"
+      dd if=/dev/hwrng of=/dev/urandom bs=$URANDOM_POOLSZ count=1
+    fi
+end script
+
+normal exit 0

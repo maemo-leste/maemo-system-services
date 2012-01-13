@@ -1,0 +1,751 @@
+upstart (0.3.8-56+0m5) unstable; urgency=low
+
+  * This entry has been added by BIFH queue processor
+    Suffix +0m5 added to package revision
+
+ -- pekka lundstrom <pekka.lundstrom@nokia.com>  Thu, 24 Sep 2009 12:06:26 +0300
+
+upstart (0.3.8-56) unstable; urgency=low
+
+  * Re-introduce separate events for different x session variants. 
+    Fixes: NB#131243, NB#115884
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Tue, 22 Sep 2009 13:35:14 +0300
+
+upstart (0.3.8-55) unstable; urgency=low
+
+  * Fix unnecessary polling from xsession. Fixes: NB#131233
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Mon, 14 Sep 2009 09:48:51 +0300
+
+upstart (0.3.8-54) unstable; urgency=low
+
+  * Fix update breakage caused by previous release. Fixes: NB#138056
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Thu, 10 Sep 2009 12:47:44 +0300
+
+upstart (0.3.8-53) unstable; urgency=low
+
+  * Merge configuration event scripts as 'rcS-late'
+  * Chain event startups a bit to avoid fragile scripted waits. 
+    Fixes: NB#137056
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Tue, 08 Sep 2009 12:08:21 +0300
+
+upstart (0.3.8-52) unstable; urgency=low
+
+  * Raise telinit safeguard-timer to 15 seconds due to random cellmo 
+    shutdown time variations (due to bad network etc). Fixes: NB#136796
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Wed, 02 Sep 2009 12:40:55 +0300
+
+upstart (0.3.8-51) unstable; urgency=low
+
+  * /etc/event.d/mounts start is changed to happen after bme.
+    Partial fix to NB#91708
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Fri, 28 Aug 2009 10:56:58 +0300
+	
+upstart (0.3.8-50) unstable; urgency=low
+
+  * Fixed zoom key autorepeat (F7 & F8) in Xsession.d/00settings
+    Fixes: NB#133361
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Tue, 26 Aug 2009 09:47:21 +0300
+
+upstart (0.3.8-49) unstable; urgency=low
+
+  * Add 'memory' event to set up swap & low memory settings. Fixes: NB#124638
+  * Move PRNG seeding to 'memory' to speed up booting.  Fixes: NB#133086
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Fri, 14 Aug 2009 10:45:37 +0300
+
+upstart (0.3.8-48) unstable; urgency=low
+
+  * Emit mounts_ok for clockd. Partial fix to NB#130838
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Tue, 11 Aug 2009 09:56:02 +0300
+
+upstart (0.3.8-47) unstable; urgency=low
+
+  * Mount user in acting dead. Fixes: NB#130996
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Fri, 07 Aug 2009 12:51:36 +0300
+
+upstart (0.3.8-46) unstable; urgency=low
+
+  * Fixed /etc/event.d/hildon-desktop miss-starting in act dead mode
+    Fixes: NB#131233 - Hildon desktop ready file is polled with 2 secs interval 
+    in acting dead mode
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Tue, 04 Aug 2009 17:25:10 +0300
+
+upstart (0.3.8-45) unstable; urgency=low
+
+  * Fixed crash where job is freed by hitting respawn limit while other jobs
+    still hold a reference to it. Fixes: NB#119531
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Fri, 03 Jul 2009 09:59:34 +0300
+
+upstart (0.3.8-44) unstable; urgency=low
+
+  * MMC mounting now happens from separate script and right after dsme startup,
+    Fixes: NB#123870
+  * Added dynamic fstab generation, Fixes NB#124796
+
+ -- Janne Karhunen <Janne.Karhunen@nokia.com>  Wed, 01 Jul 2009 10:01:06 +0300
+
+upstart (0.3.8-43) unstable; urgency=low
+
+  [ Janne Karhunen ]
+  * Detect hildon-desktop state from stamp file. Fixes: NB#113328
+
+  [ Pekka Lundstrom ]
+  * Edited file /etc/event.d/xsession-actdead to be on same level as xsession
+
+  * Removed extra init file /etc/X11/Xsession.post/41tmp-reaper
+
+  * Removed coredump file settings from /etc/event.d/rcS
+    Fixes: NB#116189, NB#118396
+
+  * Edited file /etc/event.d/xsession to populate home directory also from /home/preinstalled
+    Fixes: NB#121459
+    
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Wed, 10 May 2009 10:30:01 +0300
+
+upstart (0.3.8-42) unstable; urgency=low
+
+  [ Pekka Lundström ]
+  * Removed extra init files from system-services.
+    These are replaced by other components
+      /etc/event.d/dsme-dbus
+      /ect/X11/Xsession.post/30tablet-browser-daemon
+
+  [ Janne Karhunen ]
+  * xsession shutdown cleanup. Fixes: NB#111321
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Fri, 15 May 2009 10:25:26 +0300
+
+upstart (0.3.8-41) unstable; urgency=low
+
+  * Moved /etc/event.d/xsession post-start stuff to new script called hildon-desktop
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Fri,  17 Apr 2009 14:42:17 +0300
+
+upstart (0.3.8-40) unstable; urgency=low
+
+  * Changed code to handle situation that main process fails while post-start process is still running
+    Fixes: NB#99017 - init race condition, asserts, dumps core
+    Note that on this fix we will still see core dumps but those are not for init. Those come to
+    post-start shell script that we have to kill.
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Thu,  9 Apr 2009 16:02:32 +0200
+
+upstart (0.3.8-39) unstable; urgency=low
+
+  * Removed from system-services
+    /etc/X11/Xsession.post/25hildon-input-method
+
+  * Created new file
+    /etc/event.d/xsession-actdead
+    It takes care of starting xsession in act-dead mode.
+    Now it makes possible other startup files to depend on "start on started xsession"
+    without worring non wanted starts in act-dead mode.
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Fri,  3 Apr 2009 12:59:48 +0200
+
+upstart (0.3.8-38) unstable; urgency=low
+
+  * Removed from system-services
+     /etc/event.d/bluetooth-cal
+     /etc/event.d/ke-recv
+     /etc/event.d/dbus
+     /etc/event.d/dbus-actdead
+     /etc/X11/Xsession.d/03sapwood
+
+  * Added file /etc/X11/Xsession.actdead/00settings
+
+  * Edited /etc/event.d/xsession and /etc/X11/Xsession
+    to support X-sessions restart
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Mon,  30 Mar 2009 10:11:36 +0200
+
+upstart (0.3.8-37) unstable; urgency=low
+
+  * Created new startup directory /etc/X11/Xsession.actdead
+    Fixes: NB#106779 - Separate Xsession startup scripts for normal mode and actdead mode
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Fri,  20 Mar 2009 11:22:30 +0200
+
+upstart (0.3.8-36) unstable; urgency=low
+
+  * Removed file  /etc/X11/Xsession.post/31tracker
+    Fixes: NB#105707 - upstart tries to overwrite a file which is also in tracker binary packet
+
+  * Removed extra init files from system-services
+      /etc/X11/Xsession.d/02maemo-launcher 
+      /etc/event.d/intellisyncd
+  
+  * Cleaned file postinst-xsession from bashism
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Fri,  13 Mar 2009 10:12:02 +0200
+
+upstart (0.3.8-35) unstable; urgency=low
+
+  * Removed temporary file
+      /etc/event.d/pulseaudio-actdead
+
+  * Edited file /etc/event.d/bluetooth-cal according to bug report. 
+    Fixes: NB#104027 - Bluetooth and FM radio not working when bt is built into the kenel
+
+  * Edited file /etc/event.d/xsession according to bug report
+    Fixes: NB#105170 - xsession/system-services shall support dot files creation
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Tue,  10 Mar 2009 14:49:01 +0200
+
+upstart (0.3.8-34) unstable; urgency=low
+
+  * Removed douple init scripts
+      /etc/event.d/location-proxy
+      /etc/event.d/hal
+      /etc/X11/Xsession.d/04devlock
+
+  * Edited file /etc/X11/Xsession
+    and added file /etc/X11/Xsession.d/00settings
+    according to bug report. Fixes: NB#103365
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Fri,  27 Feb 2009 15:45:40 +0200
+
+upstart (0.3.8-33) unstable; urgency=low
+
+  * Renamed /etc/X11/Xsession.d/04actdead to 04c_actdead
+    This allows 04b_start_matchbox to run also in acting dead mode
+    Fixes: NB#102535
+
+  * Edited file /etc/event.d/rcS to enable core dumps
+    Fixes: NB#102385
+ 
+  * Removed douple init scripts
+      /etc/event.d/wlancond
+      /etc/event.d/bluetoothd
+      /etc/X11/Xsession.post/05hildon-desktop
+	
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Mon,  23 Feb 2009 13:42:45 +0200
+
+upstart (0.3.8-32) unstable; urgency=low
+ 
+  * Removed douple Xsession init files 
+       /etc/X11/Xsession.post/22hildon-home
+       /etc/X11/Xsession.post/40hildon-application-manager
+
+  * Added "sleep 15" to 99initdone. This is temporary workaround till we get 
+    Hildon Desktop launch faster.
+    Fixes: NB#102102
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Wed,  18 Feb 2009 10:09:30 +0200
+
+upstart (0.3.8-31) unstable; urgency=low
+ 
+  * Edited file /etc/X11/Xsession  (debian/session/Xsession)
+    Applied patch given in bug 101225
+    Fixes: NB#101225
+
+  * Added file /etc/X11/Xsession.post/05hildon-desktop  (debian/session/X11/Xsession.post/05hildon-desktop)
+    Fixes: NB#101224
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Thu,  12 Feb 2009 13:35:31 +0200
+
+upstart (0.3.8-30) unstable; urgency=low
+
+  * Removed douple startup files by removing following scripts from system-services
+     /etc/event.d/osso-systemui
+
+  * Added file /etc/event.d/pulseaudio-actdead as temporary solution to get sounds 
+    working in actingdead-mode
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Wed,  11 Feb 2009 16:49:15 +0200
+ 
+upstart (0.3.8-29) unstable; urgency=low
+
+  * Removed douple startup files by removing following scripts from system-services
+      /etc/event.d/bme
+      /etc/event.d/dnsmasq
+      /etc/event.d/dsme
+      /etc/event.d/testserver
+      /etc/event.d/wl1251-cal
+      /etc/event.d/xomap
+      /etc/event.d/pulseaudio
+
+  * Removed /etc/X11/Xsession/05pin-query
+    Fixes: NB#99062
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Fri,  6 Feb 2009 11:31:09 +0200
+
+upstart (0.3.8-28) unstable; urgency=low
+
+  * Not released
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Wed,  4 Feb 2009 18:11:10 +0200
+
+upstart (0.3.8-27) unstable; urgency=low
+
+  * Version -26 was never released because it caused regression.
+    Had to remove fixes to 99062 and 98839 because those caused regression 
+
+  * Removed "sleep 3" from /etc/event.d/rcS
+    Fixes: NB#99276
+
+  * Removed /etx/X11/Xsession.post/21osso-connectivity-ui
+    Fixes: NB#99290
+
+  * Removed following scripts from system-services packet
+      /etc/event.d/csd 
+      /etc/event.d/sscd
+      /etc/event.d/sscd-test
+
+  * Added GNU license text to file util/userpriv.c
+    Fixes: NB#98822
+	
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Wed,  28 Jan 2009 19:38:15 +0200
+
+upstart (0.3.8-26) unstable; urgency=low
+
+  * Removed /etc/event.d/pulseaudio from upstart system-services packet
+    Fi xes: 98839
+
+  * Removed  /etc/X11/Xsession.d/05pin-query from system-services packet
+    Fi xes: 99062
+
+  * Removed "sleep 3" from /etc/event.d/rcS
+    Fixes: NB#99276
+
+  * Removed /etx/X11/Xsession.post/21osso-connectivity-ui
+    Fixes: NB#99290
+
+  * Removed following scripts from system-services packet
+      /etc/event.d/csd 
+      /etc/event.d/sscd
+      /etc/event.d/sscd-test
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Mon,  26 Jan 2009 13:34:51 +0200
+
+upstart (0.3.8-25) unstable; urgency=low
+
+  * Removed Xsession.post/32midas from upstart system-services packet
+
+  * Changed system_services dependency from mini-rc to mini-rc | sysv-rc
+    Fixes: NB#96074
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Tue,  20 Jan 2009 09:50:31 +0200
+
+upstart (0.3.8-24) unstable; urgency=low
+
+  * maemo-launcher is started earlier
+    Fixes: NB#97801
+
+  * Removed Xsession/30osso_startup_wizard from upstart packet
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Wed,  14 Jan 2009 13:30:35 +0200
+
+upstart (0.3.8-23) unstable; urgency=low
+ 
+  * changed xsession script
+    Fixes: NB#96565
+
+  * af-services removed from system-services
+    Fixes: NB#95900
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Fri,  9 Jan 2009 13:52:51 +0200
+
+upstart (0.3.8-22) unstable; urgency=low
+
+  * Changed hildon_desktop restart max count to be 3 in 3 minutes
+  * Fixes: NB#96706
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Thu,  8 Jan 2009 11:40:33 +0200
+
+upstart (0.3.8-21) unstable; urgency=low
+
+  * Added new system-service "actdead-init-done"
+  * This fixes the problem, power on key not working in actdead mode
+  * Fixes: NB#96847
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Mon, 29 Dec 2008 15:22:30 +0200
+
+upstart (0.3.8-20) unstable; urgency=low
+
+  * Removed iphbd from system-services. 
+  * This change requires new iphbd 0.0.8
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Mon, 22 Dec 2008 13:03:22 +0200
+
+upstart (0.3.8-19) unstable; urgency=low
+
+  [ Riku Voipio ]
+  * Increase max file limit, closes NB#87447
+  * Use dsme-tool for hildon-desktop (respawning session fails due to
+    dsmetool)
+
+ -- Pekka Lundstrom <pekka.lundstrom@nokia.com>  Mon, 22 Dec 2008 11:25:53 +0200
+
+upstart (0.3.8-18) unstable; urgency=low
+
+  * Fix postinst in case of missing event.d dir
+  * move bluetooth/wlan stuff later
+  * act-dead fix
+  * Use upstart for shutdown
+
+ -- Riku Voipio <nchip@robut.research.nokia.com>  Tue,  2 Dec 2008 17:41:46 +0200
+
+upstart (0.3.8-17) unstable; urgency=low
+
+  * quick fix for NB#88155 (kernel side fix needed too)
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Mon,  1 Dec 2008 09:19:21 +0200
+
+upstart (0.3.8-16) unstable; urgency=low
+
+  * push wlancond start before icd2, NB#90758
+  * clean shutdown and reboot
+  * fix xsession.post replacement
+  * add support for any serial console, don't do serial when not rd/USER mode
+  * respawn desktop
+  * move session dbus earlier for alarmd
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Wed, 19 Nov 2008 17:40:12 +0200
+
+upstart (0.3.8-15) unstable; urgency=low
+
+  * Add proper testserver/act-dead runlevels
+  * Annotate shutdown requirements
+  * Add telinit/shutdown
+  * Protect selected user daemons with dsmetool, Fixes NB#92198
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Thu, 13 Nov 2008 19:10:03 +0200
+
+upstart (0.3.8-14) unstable; urgency=low
+
+  * Fake actdead and testserver runlevels
+  * Add module loading to wl1251-cal by hand Fixes NB#92015
+  * Source instead of run-parts the Xsession.* scripts.
+  * metalayer-crawler gone
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Fri,  7 Nov 2008 17:20:17 +0200
+
+upstart (0.3.8-13) unstable; urgency=low
+
+  * dh_installupstart: fix install of replacement script
+  * Move osso-systemui earlier, Fixes: NB#91747
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Tue,  4 Nov 2008 10:49:16 +0200
+
+upstart (0.3.8-12) unstable; urgency=low
+
+  * drop unused packages
+  * add upstart-dev package
+    - add event.d files:
+      dh_installupstart
+    - add xsession.post / xsession.d snippets
+      dh_installxsession -u 'post 40'
+      dh_installxsession -u 'pre 29'
+  * shuffle services started before suw
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Thu, 30 Oct 2008 19:24:42 +0200
+
+upstart (0.3.8-11) unstable; urgency=low
+
+  * remove services moved to their own service (alarmd, clockd, alsa-policy, ..)
+  * system-services: depend on mini-rc
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Mon, 27 Oct 2008 14:35:00 +0200
+
+upstart (0.3.8-10) unstable; urgency=low
+
+  * Fix lintian warnings
+  * Start wlancond properly
+  * Move input-method startup a bit later
+  * Add intellisyncd
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Tue, 14 Oct 2008 12:59:59 +0300
+
+upstart (0.3.8-9) unstable; urgency=low
+
+  * input-methods, X and other fixes
+  * start hildon-desktop as user
+  * fix dbus --session acccess
+  * reorder post-desktop stuff
+  * add alsaped
+  * fix postinst with busybox
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Mon, 13 Oct 2008 13:17:44 +0300
+
+upstart (0.3.8-8) experimental; urgency=low
+
+  * set more sane respawning defaults
+  * add pulseaudio
+  * add startup-wizard and block desktop until ready
+  * fix ke-recv (hopefully)
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Thu, 25 Sep 2008 18:48:44 +0300
+
+upstart (0.3.8-7) experimental; urgency=low
+
+  * fix input-method and X (on first startup)
+  * bluetooth, ke-recv fixes
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Mon, 22 Sep 2008 17:16:41 +0300
+
+upstart (0.3.8-6) experimental; urgency=low
+
+  * Add new services
+  * replace pin-dm/pin-login with xomap/start-pin-wizard
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Thu, 11 Sep 2008 16:28:37 +0300
+
+upstart (0.3.8-5) experimental; urgency=low
+
+  * Fix bme/dsme startup
+  * Fix xserver touchscreen setup
+  * bluetooth and wifi fixes
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Fri,  8 Aug 2008 14:57:21 +0300
+
+upstart (0.3.8-4) experimental; urgency=low
+
+  * Fix rcS scripts race condition
+  * Control fixes from Philippe
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Fri, 25 Jul 2008 17:35:33 +0300
+
+upstart (0.3.8-3) experimental; urgency=low
+
+  * remove old scripts, add new ones..
+
+ -- Riku Voipio <foo@example.com>  Wed,  9 Jul 2008 19:19:25 +0300
+
+upstart (0.3.8-2) experimental; urgency=low
+
+  * Re-port maemo changes back
+
+ -- Riku Voipio <ext-riku.voipio@nokia.com>  Fri, 16 May 2008 20:02:28 +0300
+
+upstart (0.3.8-1) experimental; urgency=low
+
+  * New upstream release.
+    - Fixes FTBFS on architectures not supporting the signals SIGSTKFLT and 
+      SIGUNUSED. Closes: #413944
+  * system-services: Update tty1-tty6 and replace the respawn shortcut with
+    exec and an explicit respawn stanza.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 12 Mar 2007 18:56:36 +0100
+
+upstart (0.3.5-1) experimental; urgency=low
+
+  * New upstream release.
+  * Add XS-Vcs-* fields to debian/control.
+  * debian/upstart-compat-sysv.{postinst,preinst,postrm}
+    - Handle the removal of the obsolete conffiles
+      rc0-poweroff and rc0-halt.
+  * Update job files to match the new event names.
+  * Use "console output" as there are some issues with logd atm.
+  * Start tty2-tty6 for rc2 and rc3 only.
+
+ -- Michael Biebl <biebl@debian.org>  Tue,  6 Mar 2007 00:02:59 +0100
+
+upstart (0.3.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/upstart.docs
+    - Install the NEWS, AUTHORS, TODO, HACKING and ChangeLog.nih file.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 10 Feb 2007 18:25:10 +0100
+
+upstart (0.3.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/patches/tls_check.dpatch,
+    debian/patches/logd_no_output.dpatch,
+    debian/patches/autoreconf.dpatch
+    - Removed, fixed upstream.
+  * reboot, halt, poweroff and shutdown moved to upstart-compat-sysv.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 15 Dec 2006 00:48:50 +0100
+
+upstart (0.2.7-2) experimental; urgency=low
+
+  * Set RUNLEVEL=S and PREVLEVEL=N for rcS. Closes: #397002
+  * debian/patches/logd_no_output.dpatch
+    - Added. Backport from current bzr main branch to revert broken logd
+      behaviour.
+  * debian/patches/tls_check.dpatch
+    - Added. Check if target platform has thread-local storage support.
+      Disable the usage of __thread unless supported. Closes: #397851
+  * Include README.Debian which answers common questions. 
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 11 Nov 2006 20:41:38 +0100
+
+upstart (0.2.7-1) experimental; urgency=low
+
+  [ martin f. krafft ]
+  * Set priority to extra.
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * Upload to experimental as we conflict with sysvinit which is essential.
+  * Sync with Ubuntu.
+  * debian/patches/10_inotify.dpatch
+    - Removed, merged upstream.
+  * system-services: Removed unversioned dependency on util-linux. This
+    package is marked Essential and so installed anyway.
+  * Drop sulogin hack, instead depend on the version of sysvinit-utils that
+    includes the real one.
+  * Ensure that the same version of upstart is installed as the version of
+    upstart-compat-sysv and upstart-logd; as the IPC protocol may change
+    between releases. 
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 20 Oct 2006 23:23:36 +0200
+
+upstart (0.2.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added a watch file.
+  * Apply the inotify patch using dpatch. 
+    - debian/control: Build depend on dpatch.
+    - debian/rules: Include /usr/share/dpatch/dpatch.make which adds the
+      targets patch and unpatch. Depend on them in build-stamp: and clean:.
+    - debian/patches/10_inotify.dpatch: Syscall wrappers for inotify support
+      on glibc 2.3.
+
+ -- Michael Biebl <biebl@teco.edu>  Thu, 14 Sep 2006 01:54:10 +0200
+
+upstart (0.2.5-1debian1) unstable; urgency=low
+
+  * upstart-compat-sysv: Depend on sysvinit-utils instead of sysvutils.
+  * Set myself as maintainer with approval from martin f. krafft.
+  * Changed section from base to admin.
+  * Added a patch to make it compile against glibc 2.3.
+
+ -- Michael Biebl <biebl@teco.edu>  Tue, 12 Sep 2006 16:29:12 +0200
+
+upstart (0.2.5-1) edgy; urgency=low
+
+  * New upstream release:
+    - no longer spins when no stalled event handler.  Ubuntu: #59170.
+    - shutdown works when under sysvinit.  Ubuntu: #58523;
+    - shutdown -k implemented.  Ubuntu: #58723.
+    - telinit sends shutdown event for 0, 1 and 6.  Ubuntu: #58913.
+    - basic manual pages included.  Ubuntu: #58724.
+
+  * upstart-compat-sysv Replaces: sysvinit.  Ubuntu: #59427.
+  * upstart Recommends: upstart-compat-sysv, startup-tasks & system-services.
+
+  * New upstart-logd package includes the logd daemon that can will log
+    output of jobs with "console logged" (the default) in their description
+    to /var/log/boot.
+
+  * Add /etc/event.d/rc0 that is run on the "halt" event (neither -H or -P
+    given), and modify rc0-halt to run on "system-halt" (-H given) and
+    rc0-poweroff to run on "power-off" (-P given).  Ubuntu: #59134.
+  * Fix the control-alt-delete job to run on the "ctrlaltdel" event so
+    that it's triggered properly.  Ubuntu: #59398.
+  * Fix single-user mode.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Sat,  9 Sep 2006 05:10:12 +0100
+
+upstart (0.2.1-7) edgy; urgency=low
+
+  * Remove the Essential tags again, they didn't solve the problem we
+    hoped they would (dpkg/apt still won't remove sysvinit without
+    serious persuasion) and I don't think these packages should be.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Thu,  7 Sep 2006 02:42:33 +0100
+
+upstart (0.2.1-6) edgy; urgency=low
+
+  * Make packages Essential, and change Depends to Pre-Depends so that the
+    packages work when unconfigured (nothing interesting is performed in
+    postinst).  Ubuntu: #59005.
+  * Sync priority in debian/control with that in the archive (required)
+  * Drop warning of dire consequences if you install upstart, seeing as it's
+    installed by default.
+
+  * Add new startup-tasks and system-services packages which will contain
+    the /etc/event.d files themselves (other than the main ones).
+  * Move tty definitions into system-services.
+  * Modify tty definitions to start when the rcS task has finished.  This
+    puts them in the "right" place when compared to gdm.  Ubuntu: #58630.
+
+  * Correct rcS compatibility script to ignore any information in utmp so
+    that all scripts are always run.  Ubuntu: #59203.
+  * Make rcS the console owner while it runs, temporary fix for
+    Ubuntu: #58609, #58794, #58796
+  * Include default control-alt-delete handler that reboots the machine.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Wed,  6 Sep 2006 21:52:48 +0100
+
+upstart (0.2.1-5) edgy; urgency=low
+
+  * upstart-compat-sysv Depends: initscripts (closes: Malone #58979).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue,  5 Sep 2006 12:22:50 +0100
+
+upstart (0.2.1-4) edgy; urgency=low
+
+  * Add missing #! line to top of postrm
+
+ -- Scott James Remnant <scott@ubuntu.com>  Mon,  4 Sep 2006 08:11:16 +0100
+
+upstart (0.2.1-3) edgy; urgency=low
+
+  * Remove the rc0 configuration file shipped in 0.1.0 that causes all
+    reboots to become shutdowns.  Ubuntu: #58557.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Sun,  3 Sep 2006 23:24:41 +0100
+
+upstart (0.2.1-2) edgy; urgency=low
+
+  * Don't send the SIGTERM signal unless we're upgrading from a version
+    of upstart that supports re-exec; older versions would cause a kernel
+    PANIC and change from sysvinit does nothing.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Sat,  2 Sep 2006 17:18:38 +0100
+
+upstart (0.2.1-1) edgy; urgency=low
+
+  * New upstream release:
+    - compilation fixes.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Fri,  1 Sep 2006 19:51:41 +0100
+
+upstart (0.2.0-1) edgy; urgency=low
+
+  * New upstream release:
+    - upstart includes shutdown, reboot, halt, poweroff, start, stop, status,
+      runlevel and telinit utilities.
+    - "initctl list" will list active jobs.
+    - Events vastly simplified to just simple strings.
+  
+  * Compatibility tasks for old rc scripts, along with runlevel and telinit
+    utilities now shipped in upstart-compat-sysv package.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Fri,  1 Sep 2006 02:38:44 +0100
+
+upstart (0.1.1-1) edgy; urgency=low
+
+  * New upstream release:
+    - set PATH and TERM in processes
+
+ -- Scott James Remnant <scott@ubuntu.com>  Fri, 25 Aug 2006 16:17:52 +0200
+
+upstart (0.1.0-2) edgy; urgency=low
+
+  * Oops, rename /sbin/init to /sbin/upstart as documented.  Lost this
+    while battling bzr.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Thu, 24 Aug 2006 16:30:54 +0200
+
+upstart (0.1.0-1) edgy; urgency=low
+  
+  * Initial release.
+  
+ -- Scott James Remnant <scott@ubuntu.com>  Thu, 24 Aug 2006 14:27:47 +0200

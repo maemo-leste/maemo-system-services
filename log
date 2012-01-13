@@ -1,0 +1,944 @@
+In file included from alloc.c:31:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from alloc.c:33:
+alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from string.c:36:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from string.c:39:
+string.h:31: warning: `warn_unused_result' attribute directive ignored
+string.h:35: warning: `warn_unused_result' attribute directive ignored
+string.h:38: warning: `warn_unused_result' attribute directive ignored
+string.h:41: warning: `warn_unused_result' attribute directive ignored
+string.h:45: warning: `warn_unused_result' attribute directive ignored
+string.h:47: warning: `warn_unused_result' attribute directive ignored
+string.h:50: warning: `warn_unused_result' attribute directive ignored
+string.h:53: warning: `warn_unused_result' attribute directive ignored
+string.h:56: warning: `warn_unused_result' attribute directive ignored
+string.h:61: warning: `warn_unused_result' attribute directive ignored
+string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from list.c:29:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from list.c:31:
+list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from hash.c:31:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from hash.h:24,
+                 from hash.c:33:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from hash.c:33:
+hash.h:107: warning: `warn_unused_result' attribute directive ignored
+In file included from tree.c:29:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from tree.c:31:
+tree.h:85: warning: `warn_unused_result' attribute directive ignored
+In file included from timer.c:31:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from timer.c:32:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from timer.c:35:
+timer.h:115: warning: `warn_unused_result' attribute directive ignored
+timer.h:118: warning: `warn_unused_result' attribute directive ignored
+timer.h:122: warning: `warn_unused_result' attribute directive ignored
+In file included from signal.c:31:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from signal.c:32:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:25,
+                 from signal.c:33:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from signal.c:33:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from signal.c:35:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from child.c:33:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from child.c:34:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from child.c:37:
+child.h:72: warning: `warn_unused_result' attribute directive ignored
+In file included from io.c:43:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from io.c:44:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from io.c:45:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from io.c:46:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from io.c:48:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from io.c:51:
+io.h:267: warning: `warn_unused_result' attribute directive ignored
+io.h:276: warning: `warn_unused_result' attribute directive ignored
+io.h:281: warning: `warn_unused_result' attribute directive ignored
+io.h:285: warning: `warn_unused_result' attribute directive ignored
+io.h:289: warning: `warn_unused_result' attribute directive ignored
+io.h:294: warning: `warn_unused_result' attribute directive ignored
+io.h:298: warning: `warn_unused_result' attribute directive ignored
+io.h:300: warning: `warn_unused_result' attribute directive ignored
+io.h:308: warning: `warn_unused_result' attribute directive ignored
+io.h:317: warning: `warn_unused_result' attribute directive ignored
+io.h:320: warning: `warn_unused_result' attribute directive ignored
+io.h:324: warning: `warn_unused_result' attribute directive ignored
+io.h:327: warning: `warn_unused_result' attribute directive ignored
+io.c:58: warning: `warn_unused_result' attribute directive ignored
+io.c:60: warning: `warn_unused_result' attribute directive ignored
+In file included from file.c:38:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from file.c:39:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from file.c:40:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from file.c:41:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from file.c:42:
+../nih/file.h:82: warning: `warn_unused_result' attribute directive ignored
+../nih/file.h:95: warning: `warn_unused_result' attribute directive ignored
+In file included from file.c:44:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+file.c:66: warning: `warn_unused_result' attribute directive ignored
+file.c:71: warning: `warn_unused_result' attribute directive ignored
+In file included from watch.c:42:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from watch.c:43:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from watch.c:44:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from watch.c:45:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from watch.c:46:
+../nih/file.h:82: warning: `warn_unused_result' attribute directive ignored
+../nih/file.h:95: warning: `warn_unused_result' attribute directive ignored
+In file included from watch.c:47:
+../nih/watch.h:160: warning: `warn_unused_result' attribute directive ignored
+../nih/watch.h:163: warning: `warn_unused_result' attribute directive ignored
+In file included from watch.c:49:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+watch.c:70: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:38:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:39:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:40:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:41:
+../nih/timer.h:115: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:118: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:122: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:42:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:43:
+../nih/child.h:72: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:44:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:45:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:48:
+main.h:123: warning: `warn_unused_result' attribute directive ignored
+main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from option.c:33:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from option.c:34:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:24,
+                 from option.c:35:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:25,
+                 from option.c:35:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from option.c:35:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from option.c:36:
+../nih/option.h:109: warning: `warn_unused_result' attribute directive ignored
+../nih/option.h:113: warning: `warn_unused_result' attribute directive ignored
+In file included from command.c:31:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from command.c:32:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:24,
+                 from command.c:33:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:25,
+                 from command.c:33:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from command.c:33:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from command.c:34:
+../nih/option.h:109: warning: `warn_unused_result' attribute directive ignored
+../nih/option.h:113: warning: `warn_unused_result' attribute directive ignored
+In file included from command.c:35:
+../nih/command.h:112: warning: `warn_unused_result' attribute directive ignored
+In file included from config.c:33:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from config.c:34:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from config.c:35:
+../nih/file.h:82: warning: `warn_unused_result' attribute directive ignored
+../nih/file.h:95: warning: `warn_unused_result' attribute directive ignored
+In file included from config.c:36:
+../nih/config.h:121: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:125: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:128: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:136: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:140: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:143: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:148: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:153: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:158: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:162: warning: `warn_unused_result' attribute directive ignored
+In file included from config.c:38:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+config.c:46: warning: `warn_unused_result' attribute directive ignored
+In file included from logging.c:33:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from logging.c:34:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:24,
+                 from logging.c:35:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:25,
+                 from logging.c:35:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from logging.c:35:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from error.c:32:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from error.c:33:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from error.c:35:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from error.c:37:
+error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from message.c:38:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/io.h:27,
+                 from message.c:39:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from message.c:39:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from message.c:41:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from message.c:44:
+../upstart/message.h:324: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:328: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:332: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:338: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:343: warning: `warn_unused_result' attribute directive ignored
+In file included from message.c:45:
+../upstart/wire.h:35: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:39: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:43: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:48: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:53: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:58: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:60: warning: `warn_unused_result' attribute directive ignored
+In file included from wire.c:33:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from wire.c:34:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/io.h:27,
+                 from wire.c:36:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from wire.c:36:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from wire.c:38:
+../upstart/message.h:324: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:328: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:332: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:338: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:343: warning: `warn_unused_result' attribute directive ignored
+In file included from wire.c:39:
+../upstart/wire.h:35: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:39: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:43: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:48: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:53: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:58: warning: `warn_unused_result' attribute directive ignored
+../upstart/wire.h:60: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:45:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:46:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:47:
+../nih/timer.h:115: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:118: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:122: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:48:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:49:
+../nih/child.h:72: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:50:
+../nih/option.h:109: warning: `warn_unused_result' attribute directive ignored
+../nih/option.h:113: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:51:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:52:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:32,
+                 from process.h:28,
+                 from main.c:55:
+../nih/hash.h:107: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:38,
+                 from process.h:28,
+                 from main.c:55:
+event.h:183: warning: `warn_unused_result' attribute directive ignored
+event.h:186: warning: `warn_unused_result' attribute directive ignored
+In file included from process.h:28,
+                 from main.c:55:
+job.h:224: warning: `warn_unused_result' attribute directive ignored
+job.h:227: warning: `warn_unused_result' attribute directive ignored
+job.h:230: warning: `warn_unused_result' attribute directive ignored
+job.h:232: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:55:
+process.h:34: warning: `warn_unused_result' attribute directive ignored
+process.h:36: warning: `warn_unused_result' attribute directive ignored
+process.h:39: warning: `warn_unused_result' attribute directive ignored
+In file included from control.h:25,
+                 from main.c:58:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:58:
+control.h:35: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/watch.h:34,
+                 from cfgfile.h:26,
+                 from main.c:59:
+../nih/file.h:82: warning: `warn_unused_result' attribute directive ignored
+../nih/file.h:95: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.h:26,
+                 from main.c:59:
+../nih/watch.h:160: warning: `warn_unused_result' attribute directive ignored
+../nih/watch.h:163: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:59:
+cfgfile.h:48: warning: `warn_unused_result' attribute directive ignored
+In file included from process.c:44:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from process.c:45:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/signal.h:24,
+                 from process.c:46:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from process.c:46:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from process.c:47:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from process.c:49:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:32,
+                 from process.c:51:
+../nih/hash.h:107: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:33,
+                 from process.c:51:
+../nih/timer.h:115: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:118: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:122: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:38,
+                 from process.c:51:
+event.h:183: warning: `warn_unused_result' attribute directive ignored
+event.h:186: warning: `warn_unused_result' attribute directive ignored
+In file included from process.c:51:
+job.h:224: warning: `warn_unused_result' attribute directive ignored
+job.h:227: warning: `warn_unused_result' attribute directive ignored
+job.h:230: warning: `warn_unused_result' attribute directive ignored
+job.h:232: warning: `warn_unused_result' attribute directive ignored
+In file included from process.c:52:
+process.h:34: warning: `warn_unused_result' attribute directive ignored
+process.h:36: warning: `warn_unused_result' attribute directive ignored
+process.h:39: warning: `warn_unused_result' attribute directive ignored
+In file included from job.c:40:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from job.c:41:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from job.c:42:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from job.c:43:
+../nih/hash.h:107: warning: `warn_unused_result' attribute directive ignored
+In file included from job.c:44:
+../nih/timer.h:115: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:118: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:122: warning: `warn_unused_result' attribute directive ignored
+In file included from job.c:45:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from job.c:47:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:25,
+                 from event.h:28,
+                 from job.c:52:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from event.h:28,
+                 from job.c:52:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from job.c:52:
+event.h:183: warning: `warn_unused_result' attribute directive ignored
+event.h:186: warning: `warn_unused_result' attribute directive ignored
+In file included from process.h:28,
+                 from job.c:53:
+job.h:224: warning: `warn_unused_result' attribute directive ignored
+job.h:227: warning: `warn_unused_result' attribute directive ignored
+job.h:230: warning: `warn_unused_result' attribute directive ignored
+job.h:232: warning: `warn_unused_result' attribute directive ignored
+In file included from job.c:53:
+process.h:34: warning: `warn_unused_result' attribute directive ignored
+process.h:36: warning: `warn_unused_result' attribute directive ignored
+process.h:39: warning: `warn_unused_result' attribute directive ignored
+In file included from event.c:35:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from event.c:36:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from event.c:37:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:25,
+                 from event.c:38:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from event.c:38:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from event.c:41:
+event.h:183: warning: `warn_unused_result' attribute directive ignored
+event.h:186: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:32,
+                 from event.c:42:
+../nih/hash.h:107: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:33,
+                 from event.c:42:
+../nih/timer.h:115: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:118: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:122: warning: `warn_unused_result' attribute directive ignored
+In file included from event.c:42:
+job.h:224: warning: `warn_unused_result' attribute directive ignored
+job.h:227: warning: `warn_unused_result' attribute directive ignored
+job.h:230: warning: `warn_unused_result' attribute directive ignored
+job.h:232: warning: `warn_unused_result' attribute directive ignored
+In file included from control.c:35:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from control.c:36:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from control.c:37:
+../nih/hash.h:107: warning: `warn_unused_result' attribute directive ignored
+In file included from control.c:38:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:25,
+                 from control.c:39:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from control.c:39:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from control.c:41:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from control.c:43:
+../upstart/message.h:324: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:328: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:332: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:338: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:343: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:33,
+                 from control.c:45:
+../nih/timer.h:115: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:118: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:122: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:38,
+                 from control.c:45:
+event.h:183: warning: `warn_unused_result' attribute directive ignored
+event.h:186: warning: `warn_unused_result' attribute directive ignored
+In file included from control.c:45:
+job.h:224: warning: `warn_unused_result' attribute directive ignored
+job.h:227: warning: `warn_unused_result' attribute directive ignored
+job.h:230: warning: `warn_unused_result' attribute directive ignored
+job.h:232: warning: `warn_unused_result' attribute directive ignored
+In file included from control.c:46:
+control.h:35: warning: `warn_unused_result' attribute directive ignored
+In file included from notify.c:31:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from notify.c:32:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from notify.c:33:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from notify.c:35:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from notify.c:37:
+../upstart/message.h:324: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:328: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:332: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:338: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:343: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:32,
+                 from notify.c:39:
+../nih/hash.h:107: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:33,
+                 from notify.c:39:
+../nih/timer.h:115: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:118: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:122: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/main.h:25,
+                 from job.h:34,
+                 from notify.c:39:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:34,
+                 from notify.c:39:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:38,
+                 from notify.c:39:
+event.h:183: warning: `warn_unused_result' attribute directive ignored
+event.h:186: warning: `warn_unused_result' attribute directive ignored
+In file included from notify.c:39:
+job.h:224: warning: `warn_unused_result' attribute directive ignored
+job.h:227: warning: `warn_unused_result' attribute directive ignored
+job.h:230: warning: `warn_unused_result' attribute directive ignored
+job.h:232: warning: `warn_unused_result' attribute directive ignored
+In file included from notify.c:41:
+control.h:35: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:42:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:43:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:44:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:45:
+../nih/timer.h:115: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:118: warning: `warn_unused_result' attribute directive ignored
+../nih/timer.h:122: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:46:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/watch.h:34,
+                 from cfgfile.c:47:
+../nih/file.h:82: warning: `warn_unused_result' attribute directive ignored
+../nih/file.h:95: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/watch.h:35,
+                 from cfgfile.c:47:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:47:
+../nih/watch.h:160: warning: `warn_unused_result' attribute directive ignored
+../nih/watch.h:163: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:48:
+../nih/config.h:121: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:125: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:128: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:136: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:140: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:143: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:148: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:153: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:158: warning: `warn_unused_result' attribute directive ignored
+../nih/config.h:162: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:50:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:32,
+                 from cfgfile.c:54:
+../nih/hash.h:107: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:34,
+                 from cfgfile.c:54:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from job.h:38,
+                 from cfgfile.c:54:
+event.h:183: warning: `warn_unused_result' attribute directive ignored
+event.h:186: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:54:
+job.h:224: warning: `warn_unused_result' attribute directive ignored
+job.h:227: warning: `warn_unused_result' attribute directive ignored
+job.h:230: warning: `warn_unused_result' attribute directive ignored
+job.h:232: warning: `warn_unused_result' attribute directive ignored
+In file included from cfgfile.c:56:
+cfgfile.h:48: warning: `warn_unused_result' attribute directive ignored
+cfgfile.c:157: warning: `warn_unused_result' attribute directive ignored
+cfgfile.c:166: warning: `warn_unused_result' attribute directive ignored
+In file included from initctl.c:34:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from initctl.c:35:
+../nih/string.h:31: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:35: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:38: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:41: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:45: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:47: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:50: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:53: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:56: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:61: warning: `warn_unused_result' attribute directive ignored
+../nih/string.h:65: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/signal.h:24,
+                 from initctl.c:36:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from initctl.c:36:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from initctl.c:37:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from initctl.c:38:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from initctl.c:39:
+../nih/option.h:109: warning: `warn_unused_result' attribute directive ignored
+../nih/option.h:113: warning: `warn_unused_result' attribute directive ignored
+In file included from initctl.c:40:
+../nih/command.h:112: warning: `warn_unused_result' attribute directive ignored
+In file included from initctl.c:42:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+In file included from initctl.c:45:
+../upstart/message.h:324: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:328: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:332: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:338: warning: `warn_unused_result' attribute directive ignored
+../upstart/message.h:343: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:39:
+../nih/alloc.h:76: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:79: warning: `warn_unused_result' attribute directive ignored
+../nih/alloc.h:82: warning: `warn_unused_result' attribute directive ignored
+In file included from ../nih/signal.h:24,
+                 from main.c:40:
+../nih/list.h:96: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:40:
+../nih/signal.h:74: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:41:
+../nih/io.h:267: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:276: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:281: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:285: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:289: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:294: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:298: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:300: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:308: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:317: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:320: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:324: warning: `warn_unused_result' attribute directive ignored
+../nih/io.h:327: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:42:
+../nih/main.h:123: warning: `warn_unused_result' attribute directive ignored
+../nih/main.h:131: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:43:
+../nih/option.h:109: warning: `warn_unused_result' attribute directive ignored
+../nih/option.h:113: warning: `warn_unused_result' attribute directive ignored
+In file included from main.c:44:
+../nih/error.h:87: warning: `warn_unused_result' attribute directive ignored
+main.c:59: warning: `warn_unused_result' attribute directive ignored

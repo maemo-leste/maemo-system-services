@@ -1,0 +1,10 @@
+# update event file
+
+if [ -e /etc/event.replace.d/#SCRIPT# ]; then
+	[ -d /etc/event.d/ ] || mkdir -p /etc/event.d/
+	cp -f /etc/event.replace.d/#SCRIPT# /etc/event.d/#SCRIPT#
+fi
+
+# initctl stop #SCRIPT# --no-wait
+# initctl start #SCRIPT# --no-wait
+

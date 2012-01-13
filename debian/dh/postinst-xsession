@@ -1,0 +1,27 @@
+#!/bin/sh	
+
+start=#START#
+priority=#PRIORITY#
+script=#SCRIPT#
+
+# against policy - clean up any version around
+
+if [ -e /etc/X11/Xsession.d/??${script} ]; then
+	rm -f /etc/X11/Xsession.d/??${script}
+fi
+
+if [ -e /etc/X11/Xsession.post/??${script} ]; then
+	rm -f /etc/X11/Xsession.post/??${script}
+fi
+
+if [ x"$start" = x"post" ]; then
+	if [ -e /etc/X11/replace/Xsession.post/${script} ]; then
+		[ -d /etc/X11/Xsession.post/ ] || mkdir -p /etc/X11/Xsession.post/
+		cp -f /etc/X11/replace/Xsession.post/${script} /etc/X11/Xsession.post/${priority}${script}
+	fi
+else 
+	if [ -e /etc/X11/replace/Xsession.d/${script} ]; then
+		[ -d /etc/X11/Xsession.d/ ] || mkdir -p /etc/X11/Xsession.d/
+		cp -f /etc/X11/replace/Xsession.d/${script} /etc/X11/Xsession.d/${priority}${script}
+	fi
+fi

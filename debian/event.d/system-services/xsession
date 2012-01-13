@@ -1,0 +1,20 @@
+description "starting Xsession"
+author "Pekka Lundstrom"
+
+console none
+
+start on MOUNTS_OK
+stop on stopping xomap
+
+script
+    if [ -e /tmp/ACT_DEAD ]; then
+        initctl emit --no-wait XSESSIONS_ACTDEAD_STARTING
+    else
+        initctl emit --no-wait XSESSIONS_STARTING
+    fi
+    exec su - user /etc/X11/Xsession
+end script
+
+kill timeout 5
+normal exit 0 TERM
+service

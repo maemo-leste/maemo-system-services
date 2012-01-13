@@ -1,0 +1,39 @@
+#!/bin/sh -x
+
+# emulate runlevel transitions on upstart
+# in case initctl gets stuck, sleep and force shutdown
+
+if [ "x$1" = "x-t" ]
+then
+        shift; shift;
+fi
+
+case $1 in
+        2)
+        echo -n USER > /var/lib/dsme/saved_state
+        touch /tmp/reboot
+        initctl start --no-wait shutdown
+        sleep 15
+        /sbin/reboot -f
+        ;;
+        5)
+        echo -n ACT_DEAD > /var/lib/dsme/saved_state
+        touch /tmp/reboot
+        initctl start --no-wait shutdown
+        sleep 15
+        /sbin/reboot -f
+	;;
+        0)
+        touch /tmp/shutdown
+        initctl start --no-wait shutdown
+        sleep 15
+        /sbin/poweroff -f
+        ;;
+        6)
+        touch /tmp/reboot
+        initctl start --no-wait shutdown
+        sleep 15
+        /sbin/reboot -f
+        ;;
+esac
+
