@@ -14,26 +14,26 @@ case $1 in
         touch /tmp/reboot
         initctl start --no-wait shutdown
         sleep 15
-        /sbin/reboot -f
+        /etc/init.d/minireboot
         ;;
         5)
         echo -n ACT_DEAD > /var/lib/dsme/saved_state
         touch /tmp/reboot
         initctl start --no-wait shutdown
         sleep 15
-        /sbin/reboot -f
-	;;
+        /etc/init.d/minireboot
+        ;;
         0)
         touch /tmp/shutdown
         initctl start --no-wait shutdown
         sleep 15
-        /sbin/poweroff -f
+        /etc/init.d/minishutdown
         ;;
         6)
         touch /tmp/reboot
         initctl start --no-wait shutdown
         sleep 15
-        /sbin/reboot -f
+        /etc/init.d/minireboot
         ;;
 esac
 

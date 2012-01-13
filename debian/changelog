@@ -1,9 +1,28 @@
-upstart (0.3.8-64+0m5) unstable; urgency=low
+upstart (0.3.8-67+0m5) unstable; urgency=low
 
   * This entry has been added by BIFH queue processor
-    version has been changed to 0.3.8-64+0m5
+    version has been changed to 0.3.8-67+0m5
 
- -- Gary Birkett <ext-gary.2.birkett@nokia.com>  Fri, 05 Mar 2010 18:26:23 +0200
+ -- Chandra Vanipenta <ext-chandra.1.vanipenta@nokia.com>  Tue, 16 Mar 2010 14:04:33 +0200
+
+upstart (0.3.8-67) unstable; urgency=low
+
+  * Fixes: NB#152673: no fsck at boot time for /home partition
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Tue, 16 Mar 2010 10:12:14 +0300
+
+upstart (0.3.8-66) unstable; urgency=low
+
+  * Fixes: NB#159356: Optification fails
+  * If failed to mount /home and system has been already optified - reboot  
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Fri, 12 Mar 2010 10:54:24 +0300
+
+upstart (0.3.8-65) unstable; urgency=low
+
+  * Fixes: NB#159695: Optification error with alarm when device switched off
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Tue, 09 Mar 2010 14:06:04 +0300
 
 upstart (0.3.8-64) unstable; urgency=low
 
