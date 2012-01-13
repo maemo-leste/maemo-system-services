@@ -6,6 +6,10 @@ console none
 start on MOUNTS_OK
 stop on stopping xomap
 
+pre-start script
+        DISPLAY=:0 /usr/sbin/waitx
+end script
+
 script
     if [ -e /tmp/ACT_DEAD ]; then
         initctl emit --no-wait XSESSIONS_ACTDEAD_STARTING

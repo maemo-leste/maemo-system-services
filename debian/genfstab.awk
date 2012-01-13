@@ -17,6 +17,7 @@ start == 1 && $6 == 82 {
 
 start == 1 && $6 == 83 && !__home {
 	printf "%s /home ext3 %s 0 0\n", $1, home_opts
+	printf "/home/opt /opt none bind\n"
 	__home++
 }
 

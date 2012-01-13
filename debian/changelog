@@ -1,9 +1,51 @@
-upstart (0.3.8-57+0m5) unstable; urgency=low
+upstart (0.3.8-64+0m5) unstable; urgency=low
 
   * This entry has been added by BIFH queue processor
-    Suffix +0m5 added to package revision
+    version has been changed to 0.3.8-64+0m5
 
- -- Attiq Malik <ext-attiq.1.malik@nokia.com>  Tue, 10 Nov 2009 11:38:27 +0200
+ -- Gary Birkett <ext-gary.2.birkett@nokia.com>  Fri, 05 Mar 2010 18:26:23 +0200
+
+upstart (0.3.8-64) unstable; urgency=low
+
+  * Fixes: NB#159356: Optification fails
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Thu, 04 Mar 2010 18:07:22 +0300
+
+upstart (0.3.8-63) unstable; urgency=low
+
+  * Fixes: NB#158112: Maemo-optify-boottime needs to be run on startup
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Tue, 02 Mar 2010 19:57:34 +0300
+
+upstart (0.3.8-62) unstable; urgency=low
+
+  * Disabled call Maemo-optify-boottime
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Tue, 02 Mar 2010 16:53:11 +0300
+
+upstart (0.3.8-61) unstable; urgency=low
+
+  * Fixes: NB#158359: F5 cyclic reboots
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Sat, 27 Feb 2010 19:21:49 +0300
+
+upstart (0.3.8-60) unstable; urgency=low
+
+  * Disabled 158112: Maemo-optify-boottime needs to be run on startup
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Thu, 25 Feb 2010 10:17:49 +0300
+
+upstart (0.3.8-59) unstable; urgency=low
+
+  * Fixes: NB#140665: /opt is a broken symlink in the SDK environment
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Tue, 16 Feb 2010 18:41:10 +0300
+
+upstart (0.3.8-58) unstable; urgency=low
+
+  * Fixes: NB#154543: Potential up to 1 seconds saving for boot 
+
+ -- Sergey Yakubenko <EXT-Sergey.Yakubenko@nokia.com>  Mon, 15 Feb 2010 18:12:26 +0300
 
 upstart (0.3.8-57) unstable; urgency=low
 
