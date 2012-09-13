@@ -30,6 +30,7 @@ case $1 in
         /etc/init.d/minishutdown
         ;;
         6)
+        dsmetool -b && sleep 5
         touch /tmp/reboot
         initctl start --no-wait shutdown
         sleep 15
