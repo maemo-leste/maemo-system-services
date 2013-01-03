@@ -1,3 +1,10 @@
+upstart (0.3.8-68+0cssu2) unstable; urgency=low
+
+  * telinit 0 - try to call dsme device power off
+  * Now calling system binaries: halt, poweroff and reboot is safe
+
+ -- Pali Rohár <pali.rohar@gmail.com>  Thu, 03 Jan 2013 10:24:51 +0100
+
 upstart (0.3.8-68+0cssu1) unstable; urgency=low
 
   * telnit 6 - try to call dsme reboot, so dsme will catch reboot request and do magic stuff

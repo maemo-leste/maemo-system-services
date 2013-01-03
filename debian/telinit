@@ -24,6 +24,7 @@ case $1 in
         /etc/init.d/minireboot
         ;;
         0)
+        dsmetool -p && sleep 5
         touch /tmp/shutdown
         initctl start --no-wait shutdown
         sleep 15
