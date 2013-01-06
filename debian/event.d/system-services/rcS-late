@@ -136,15 +136,14 @@ script
     fi
 
     # Data for the panic info driver
-    (
     mount -t debugfs nodev /sys/kernel/debug
-    modprobe panic_info_buff || true
-    OSSO_VERSION="$(osso-product-info 2>/dev/null || true)"
-    CSSU_VERSION="CSSU_VERSION=$(dpkg-query -W -f \${Version} mp-fremantle-community-pr 2>/dev/null || echo '<unknown>')"
-    KERNEL_VERSION="KERNEL_VERSION=$(uname -a 2>/dev/null || echo '<unknown>')"
-    sleep 1
-    ( echo $OSSO_VERSION; echo $CSSU_VERSION; echo $KERNEL_VERSION ) > /sys/kernel/debug/panic_info_buff || true
-    ) &
+    if modprobe panic_info_buff; then
+      OSSO_VERSION="$(osso-product-info 2>/dev/null || true)"
+      CSSU_VERSION="CSSU_VERSION='$(dpkg-query -W -f \${Version} mp-fremantle-community-pr 2>/dev/null || echo '<unknown>')'"
+      KERNEL_VERSION="KERNEL_VERSION='$(uname -a 2>/dev/null || echo '<unknown>')'"
+      sleep 1
+      printf "%s\n%s\n%s" "$OSSO_VERSION" "$CSSU_VERSION" "$KERNEL_VERSION" > /sys/kernel/debug/panic_info_buff || true
+    fi
 end script
 
 normal exit 0
