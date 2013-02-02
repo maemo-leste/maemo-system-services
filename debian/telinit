@@ -12,29 +12,25 @@ case $1 in
         2)
         echo -n USER > /var/lib/dsme/saved_state
         touch /tmp/reboot
-        initctl start --no-wait shutdown
-        sleep 15
+        initctl start --no-wait shutdown && sleep 15
         /etc/init.d/minireboot
         ;;
         5)
         echo -n ACT_DEAD > /var/lib/dsme/saved_state
         touch /tmp/reboot
-        initctl start --no-wait shutdown
-        sleep 15
+        initctl start --no-wait shutdown && sleep 15
         /etc/init.d/minireboot
         ;;
         0)
         dsmetool -p && sleep 5
         touch /tmp/shutdown
-        initctl start --no-wait shutdown
-        sleep 15
+        initctl start --no-wait shutdown && sleep 15
         /etc/init.d/minishutdown
         ;;
         6)
         dsmetool -b && sleep 5
         touch /tmp/reboot
-        initctl start --no-wait shutdown
-        sleep 15
+        initctl start --no-wait shutdown && sleep 15
         /etc/init.d/minireboot
         ;;
 esac
