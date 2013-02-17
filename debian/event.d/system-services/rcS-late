@@ -131,8 +131,13 @@ script
     # Initialize PRNG pool with the HW RNG. Slow, but that's ok.
     URANDOM_POOLSZ=512
     if [ -e /dev/hwrng ]; then
+      RANDOM=/dev/hwrng
+    elif [ -e /dev/hw_random ]; then
+      RANDOM=/dev/hw_random
+    endif
+    if [ -e "$RANDOM" ]; then
       echo "Seeding entropy pool"
-      dd if=/dev/hwrng of=/dev/urandom bs=$URANDOM_POOLSZ count=1
+      dd if=$RANDOM of=/dev/urandom bs=$URANDOM_POOLSZ count=1
     fi
 
     # Data for the panic info driver
