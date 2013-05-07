@@ -1,3 +1,11 @@
+upstart (0.3.8-68+0cssu5) unstable; urgency=low
+
+  * Try to use also /dev/hw_random as random char device which is in upstream kernel
+  * Add support for optional persistent fstab, auto fsck, filesystem detection and mmcblock devices detection
+    This can be configured via files: /etc/default/mount-opts and /etc/default/mount-opts-overwrite
+
+ -- Pali Rohár <pali.rohar@gmail.com>  Tue, 07 May 2013 20:03:18 +0200
+
 upstart (0.3.8-68+0cssu4) unstable; urgency=low
 
   * rcS-late: Sleep only if initctl call success
