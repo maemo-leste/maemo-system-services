@@ -66,8 +66,6 @@ install: build
 		done; \
 	done
 	cp -a debian/session/* debian/system-services/etc/X11 
-	cp -a debian/genfstab.awk debian/system-services/usr/lib
-	chmod +x debian/system-services/usr/lib/genfstab.awk
 	cp -a debian/mount-opts debian/system-services/etc/default
 	rm -rf `find debian/system-services -name .svn`
 	cp -a debian/telinit debian/upstart/sbin/
