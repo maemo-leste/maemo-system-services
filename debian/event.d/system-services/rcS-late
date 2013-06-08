@@ -108,7 +108,7 @@ script
       fi
 
       # /opt
-      if [ $root_is_ubi -eq 1 ] || [ -d /home/opt ]; then
+      if [ $root_is_ubi -eq 1 ] || [ ! -e /opt ] || [ -d /opt -a -z "`ls -A /opt`" ]; then
         echo "/home/opt /opt none bind 0 0" >> $tmp_fstab
       fi
 
