@@ -55,7 +55,13 @@ script
 
       # Find internal eMMC device, fallback to mmcblk0
       for emmc in mmcblk1 mmcblk0; do
-        if grep -q internal /sys/block/$emmc/device/../slot_name; then
+        if [ ! -e /dev/$emmc ]; then continue; fi
+        device=`stat /dev/$emmc | sed -n 's/.*Device type: //p'`
+        major=`echo $device | sed 's/,.*//'`
+        minor=`echo $device | sed 's/.*,//'`
+        major=$((0x$major))
+        minor=$((0x$minor))
+        if grep -q internal /sys/dev/block/$major:$minor/device/../slot_name; then
           break
         fi
       done
@@ -90,7 +96,7 @@ script
       swaps=`blkid -c /dev/null -o device -t TYPE=swap`
 
       if [ "$swap_sd" = "0" ]; then
-        swaps=`echo $swaps | tr ' ' '\n' | grep ${emmc}`
+        swaps=`echo $swaps | tr ' ' '\n' | grep $emmc || true`
       fi
 
       # Generate fstab
@@ -100,7 +106,7 @@ script
       echo "# If you want static /etc/fstab add genfstab=\"0\" to file /etc/default/mount-opts-overwrite" >> $tmp_fstab
 
       # /
-      grep '^[^\ ]* / ' /proc/mounts >> $tmp_fstab
+      grep '^[^\ ]* / ' /proc/mounts >> $tmp_fstab || true
 
       # /home
       if [ $root_is_ubi -eq 1 ]; then
