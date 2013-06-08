@@ -21,10 +21,10 @@ genfstab="1"
 swap_sd="0"
 
 # Call fsck.<fstype> -p for /home at boot time in /etc/event.d/rcS-late
-home_fsck="1"
+home_fsck="0"
 
 # Call fsck.<fstype> -p for user's partitions (MyDocs, SD cards, ...)
-user_fsck="1"
+user_fsck="0"
 
 # Include overwrite file
 if [ -f /etc/default/mount-opts-overwrite ]; then
