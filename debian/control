@@ -26,7 +26,7 @@ Description: dh_installupstart tool
 
 Package: system-services
 Architecture: any
-Depends: upstart (>= 0.2.0), mini-rc | sysv-rc
+Depends: upstart (>= 0.2.0), mini-rc | sysv-rc, e2fsprogs (>= 1.42.5)
 Replaces: upstart (<< 0.2.1-6)
 Description: definitions of essential system services
  This package contains the definitions of services essential for the
