@@ -1,3 +1,9 @@
+upstart (0.3.8-68+0cssu7) unstable; urgency=low
+
+  * Enable auto fsck on boot and depends on new e2fsprogs (>= 1.42.5)
+
+ -- Pali Rohár <pali.rohar@gmail.com>  Sun, 30 Jun 2013 20:25:39 +0200
+
 upstart (0.3.8-68+0cssu6) unstable; urgency=low
 
   * Fix booting rcS-late when SD card is inserted
