@@ -45,6 +45,20 @@ script
       ACT_DEAD=1
     fi
 
+    # Backup old fsck logs, max size is 512kB
+    if [ -e /var/log/fsck.log ]; then
+        FSCK_SIZE=`du -sk /var/log/fsck.log | cut -f1`
+        if [ $FSCK_SIZE -ge 512 ]; then
+            mv /var/log/fsck.log /var/log/fsck.log.old || true
+        fi
+    fi
+    if [ -e /var/log/fsck_home.log ]; then
+        FSCK_HOME_SIZE=`du -sk /var/log/fsck_home.log | cut -f1`
+        if [ $FSCK_HOME_SIZE -ge 512 ]; then
+            mv /var/log/fsck_home.log /var/log/fsck_home.log.old || true
+        fi
+    fi
+
     # Load fstab and mount options
     . /etc/default/mount-opts || true
 
