@@ -10,6 +10,9 @@ root_opts="errors=continue,commit=1,data=writeback"
 # Options for mounting user's filesystems (MyDocs, SD cards, ...)
 user_opts="noauto,nodev,exec,nosuid"
 
+# Options for swap partitions
+swap_opts=""
+
 # Options for different filesystems
 vfat_opts="utf8,uid=29999,shortname=mixed,dmask=000,fmask=0000,rodir"
 ntfs_opts="nls=utf8,uid=29999,umask=0000"

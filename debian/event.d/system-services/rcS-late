@@ -97,12 +97,15 @@ script
       [ -z "$mydocs_type" ] && mydocs_type=vfat;
       [ -z "$home_type" ] && home_type=ext3;
 
+      swap_opts="sw,$swap_opts"
+
       eval mydocs_opts=$common_opts,$user_opts,\$${mydocs_type}_opts
       eval home_opts=$common_opts,$root_opts,\$${home_type}_opts
 
       # Remove duplicate commas from variables
       mydocs_opts=`echo $mydocs_opts | sed ':l;s/,,/,/g;tl;s/^,//;s/,$//'`
       home_opts=`echo $home_opts | sed ':l;s/,,/,/g;tl;s/^,//;s/,$//'`
+      swap_opts=`echo $swap_opts | sed ':l;s/,,/,/g;tl;s/^,//;s/,$//'`
 
       [ -z "$mydocs_opts" ] && mydocs_opts=defaults
       [ -z "$home_opts" ] && home_opts=defaults
@@ -137,7 +140,7 @@ script
 
       # swap
       for dev in $swaps; do
-        echo "$dev none swap sw 0 0" >> $tmp_fstab
+        echo "$dev none swap $swap_opts 0 0" >> $tmp_fstab
       done
 
       cmp -s $tmp_fstab $fstab || cp $tmp_fstab $fstab
