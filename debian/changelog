@@ -1,6 +1,8 @@
 upstart (0.3.8-68+0cssu7) unstable; urgency=low
 
   * Enable auto fsck on boot and depends on new e2fsprogs (>= 1.42.5)
+  * Backup old fsck logs to have free ubifs rootfs, allow only one backup, max file log size is 512kB
+  * Add support for swap_opts in /etc/default/mount-opts
 
  -- Pali Rohár <pali.rohar@gmail.com>  Sun, 30 Jun 2013 20:25:39 +0200
 
