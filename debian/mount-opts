@@ -5,7 +5,7 @@
 common_opts="noatime,nodiratime"
 
 # Options for mounting root's filesystems (/, /home)
-root_opts="errors=continue,commit=1,data=writeback"
+root_opts="errors=continue,commit=1"
 
 # Options for mounting user's filesystems (MyDocs, SD cards, ...)
 user_opts="noauto,nodev,exec,nosuid"
@@ -16,6 +16,8 @@ swap_opts=""
 # Options for different filesystems
 vfat_opts="utf8,uid=29999,shortname=mixed,dmask=000,fmask=0000,rodir"
 ntfs_opts="nls=utf8,uid=29999,umask=0000"
+ext3_opts="data=writeback"
+ext4_opts="data=writeback"
 
 # Renerate fstab at boot time in /etc/event.d/rcS-late
 genfstab="1"
