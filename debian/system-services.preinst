@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+if [ "$1" = "install" ] || [ "$1" = "upgrade" ]; then
+	if dpkg-query -W -f='${Conffiles}' system-services | grep -q /etc/default/mount-opts; then
+		# Remove old conffile
+		rm -f /etc/default/mount-opts
+	fi
+fi
+
+#DEBHELPER#
+
+exit 0

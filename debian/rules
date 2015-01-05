@@ -91,6 +91,7 @@ binary-arch: build install
 	dh_compress
 	dh_fixperms
 	dh_installdeb
+	sed '/\/etc\/default\/mount-opts/d' -i debian/system-services/DEBIAN/conffiles
 	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
