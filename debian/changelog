@@ -1,3 +1,9 @@
+upstart (0.3.8-68+0cssu9) unstable; urgency=low
+
+  * Do not make /etc/default/mount-opts file as conffile
+
+ -- Pali Rohár <pali.rohar@gmail.com>  Mon, 05 Jan 2015 18:04:03 +0100
+
 upstart (0.3.8-68+0cssu8) unstable; urgency=low
 
   * Use data=writeback for all ext3 and ext4 partitions (not only root)
