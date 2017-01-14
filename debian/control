@@ -1,33 +1,19 @@
-Source: upstart
+Source: maemo-system-services
 Section: admin
 Priority: extra
-Maintainer: Pekka Lundstrom <pekka.lundstrom@nokia.com>
-Uploaders: Philippe De Swert <philippe.de-swert@nokia.com>
+Maintainer: Ivaylo Dimitrov <freemangordon@abv.bg>
 Build-Depends: debhelper
 Standards-Version: 3.7.3
 
-Package: upstart
+Package: maemo-system-services-dev
 Architecture: any
-Pre-Depends: ${shlibs:Depends}, sysvinit-utils (>= 2.86.ds1-23) | busybox (>= 3:1.6.1.legal-1osso8)
-Recommends: upstart-compat-sysv, upstart-logd, startup-tasks, system-services
-Conflicts: sysvinit
-Replaces: sysvinit
-Provides: sysvinit
-Description: event-based init daemon
- upstart is a replacement for the /sbin/init daemon which handles
- starting of tasks and services during boot, stopping them during
- shutdown and supervising them while the system is running.
-
-Package: upstart-dev
-Architecture: any
-Description: dh_installupstart tool
- This package contains a dh_installupstart a tool to simplify
+Description: dh_installxsession tool
+ This package contains a dh_installxsession a tool to simplify
  deploying upstart
 
-Package: system-services
+Package: maemo-system-services
 Architecture: any
-Depends: upstart (>= 0.2.0), mini-rc | sysv-rc, e2fsprogs (>= 1.42.5)
-Replaces: upstart (<< 0.2.1-6)
-Description: definitions of essential system services
+Depends: upstart
+Description: definitions of essential maemo system services
  This package contains the definitions of services essential for the
- normal operation of a Linux system.
+ normal operation of a Maemo system.

@@ -4,7 +4,7 @@
 THEME=`cat /etc/hildon/theme/index.theme |grep MatchboxTheme |cut -d "=" -f 2`
 if [ "x$THEME" = "x" ]; then
   unset AF_DEFINES_SOURCED
-  source /etc/osso-af-init/af-defines.sh
+  . /etc/osso-af-init/af-defines.sh
   THEME=$DEFAULTMBTHEME
 fi
 

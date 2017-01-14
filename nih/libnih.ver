@@ -1,6 +1,0 @@
-LIBNIH_0 {
-	global:
-		nih_*;
-	local:
-		*;
-};

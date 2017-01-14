@@ -1,5 +1,0 @@
-stop on starting shutdown
-
-exec /sbin/getty 115200 ttyS1
-
-respawn
