@@ -22,6 +22,7 @@ install:
 		done; \
 	done
 	cp -a debian/session/* debian/maemo-system-services/etc/X11
+	cp -a debian/dbus/* debian/maemo-system-services/etc/dbus-1
 	cp -a debian/dh/dh_install* debian/maemo-system-services-dev/usr/bin
 	cp -a debian/dh/postinst-* debian/maemo-system-services-dev/usr/share/debhelper/autoscripts/
 
@@ -55,7 +56,6 @@ clean: clean-source
 clean-source:
 	dh_testdir
 	rm -f build-stamp
-	[ ! -f Makefile ] || $(MAKE) clean distclean
 	dh_clean 
 
 
