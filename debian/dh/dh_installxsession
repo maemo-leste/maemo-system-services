@@ -24,7 +24,9 @@ instances of the same text to be added to maintainer scripts.
 
 =cut
 
-init();
+init(options => {
+	"init-script=s" => \$dh{INIT_SCRIPT},
+});
 
 foreach my $package (@{$dh{DOPACKAGES}}) {
 	my $tmp=tmpdir($package);
@@ -39,7 +41,7 @@ foreach my $package (@{$dh{DOPACKAGES}}) {
 	}
 	else {
 		$script=$package;
-	}       
+	}
 	
 	my $init=pkgfile($package,$script) || pkgfile($package,"xsession");
 
