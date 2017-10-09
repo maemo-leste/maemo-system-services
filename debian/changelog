@@ -1,4 +1,4 @@
-maemo-system-services (0.4.0-0+0m7) unstable; urgency=low
+maemo-system-services (0.4.0-0) unstable; urgency=low
 
   * rename the package and prepare it to coexists with upstream upstart
   * remove all the stuff that belongs to upstart
