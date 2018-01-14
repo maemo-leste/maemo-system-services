@@ -9,11 +9,11 @@ Package: maemo-system-services-dev
 Architecture: any
 Description: dh_installxsession tool
  This package contains a dh_installxsession a tool to simplify
- deploying upstart
+ deploying X startup scripts
 
 Package: maemo-system-services
 Architecture: any
-Depends: upstart
+Depends: sysv-rc | openrc
 Description: definitions of essential maemo system services
  This package contains the definitions of services essential for the
  normal operation of a Maemo system.
