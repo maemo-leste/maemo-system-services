@@ -1,3 +1,9 @@
+maemo-system-services (0.5.0-0) unstable; urgency=low
+
+  * change init system to sysv-rc or openrc
+
+ -- Ivaylo Dimitrov <freemangordon@abv.bg>  Sun, 14 Jan 2018 16:35:32 +0200
+
 maemo-system-services (0.4.0-0) unstable; urgency=low
 
   * rename the package and prepare it to coexists with upstream upstart
