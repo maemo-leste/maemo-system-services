@@ -11,14 +11,14 @@ export DH_OPTIONS
 install:
 	dh_testdir
 	dh_testroot
-	dh_clean -k
+	dh_prep
 	dh_installdirs
 
 	# Copy across the default jobs
 	@set -x; for pkg in maemo-system-services; do \
-		for job in debian/init/$$pkg/*; do \
+		for job in debian/init.d/$$pkg/*; do \
 		install -m 644 -o root -g root $$job \
-				debian/$$pkg/etc/init || exit 1; \
+				debian/$$pkg/etc/init.d || exit 1; \
 		done; \
 	done
 	cp -a debian/session/* debian/maemo-system-services/etc/X11
@@ -41,6 +41,9 @@ binary-arch: build install
 	dh_installdocs
 	dh_install --sourcedir=debian/tmp
 	dh_link
+	dh_installinit --no-start --name=welcome
+	dh_installinit --no-start --name=xorg
+	dh_installinit --no-start --name=xsession
 	dh_strip
 	dh_compress
 	dh_fixperms

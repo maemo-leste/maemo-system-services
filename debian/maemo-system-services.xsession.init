@@ -1,0 +1,21 @@
+#!/sbin/openrc-run
+
+description="starting Xsession"
+
+depend() {
+	need xorg
+}
+
+start_pre() {
+        DISPLAY=:0 /usr/sbin/waitx
+}
+
+start() {
+#    if [ -e /tmp/ACT_DEAD ]; then
+#        initctl emit --no-wait XSESSIONS_ACTDEAD_STARTING
+#    else
+#        initctl emit --no-wait XSESSIONS_STARTING
+#    fi
+    exec su - user /etc/X11/Xsession
+}
+

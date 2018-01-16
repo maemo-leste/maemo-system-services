@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+
+description="Xorg Server"
+
+depend() {
+	need dsme
+	after bootmisc rsyslog
+}
+
+start() {
+    einfo "Starting Xorg Server" > /dev/console
+    XORG_OPTIONS="-logfile /tmp/Xorg.0.log -logverbose 1 -nolisten tcp -noreset -s 0 -core"
+    /usr/sbin/dsmetool -n -8 -r "/usr/bin/Xorg $XORG_OPTIONS"
+}
+
+start_post() {
+    DISPLAY=:0 /usr/sbin/waitx
+}
+
+stop_post() {
+    if [ -d /home/user ]; then
+	cp /tmp/Xorg.0.log /home/user
+    fi
+}
