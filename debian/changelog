@@ -1,3 +1,10 @@
+maemo-system-services (0.5.1-0) unstable; urgency=low
+
+  * add "keyword -timeout" to xsession init script to work around slow
+    starting hildon-desktop (due to powervr issues)
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Mon, 03 Sep 2018 20:47:29 +0200
+
 maemo-system-services (0.5.0-0) unstable; urgency=low
 
   * change init system to sysv-rc or openrc
