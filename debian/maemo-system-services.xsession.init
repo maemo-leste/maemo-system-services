@@ -4,6 +4,7 @@ description="starting Xsession"
 
 depend() {
 	need xorg
+	keyword -timeout
 }
 
 start_pre() {
