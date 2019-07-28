@@ -1,3 +1,9 @@
+maemo-system-services (0.5.3-0) unstable; urgency=low
+
+  * Do not override existing dbus sessions, reply on dbus-user instead
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Sun, 28 Jul 2019 15:15:26 +0200
+
 maemo-system-services (0.5.2-0) unstable; urgency=low
 
   * Make xsession script depend on mce
