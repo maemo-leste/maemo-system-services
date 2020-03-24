@@ -1,3 +1,10 @@
+maemo-system-services (0.5.4) unstable; urgency=medium
+
+  * Add LSB headers to init scripts
+  * Add systemd support
+
+ -- Arthur Demchenkov <spinal.by@gmail.com>  Tue, 24 Mar 2020 17:53:45 +0300
+
 maemo-system-services (0.5.3-0) unstable; urgency=low
 
   * Do not override existing dbus sessions, reply on dbus-user instead
