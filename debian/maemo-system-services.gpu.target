@@ -1,0 +1,9 @@
+# gpu.target is a virtual target - it becomes active as soon as GPU
+# drivers are done with initialization. If your service requires GPU
+# to be ready, include 'After=gpu.target' in your service file.
+
+[Unit]
+Description=GPU drivers initialization
+
+[Install]
+WantedBy=graphical.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Xsession
+Requires=xorg.service mce.service
+After=xorg.service mce.service
+
+[Service]
+ExecStart=/etc/X11/Xsession
+User=user
+
+[Install]
+WantedBy=graphical.target

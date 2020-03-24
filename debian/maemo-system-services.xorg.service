@@ -1,0 +1,14 @@
+[Unit]
+Description=Xorg Server
+Requires=gpu.target
+After=gpu.target
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/Xorg -logfile /tmp/Xorg.0.log -logverbose 1 -nolisten tcp -noreset -s 0 -core
+ExecStopPost=-/bin/cp /tmp/Xorg.0.log /home/user
+Restart=always
+Nice=-8
+
+[Install]
+WantedBy=graphical.target
