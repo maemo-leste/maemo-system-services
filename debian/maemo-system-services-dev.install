@@ -1,0 +1,2 @@
+dh/dh_install* /usr/bin
+dh/postinst-* /usr/share/debhelper/autoscripts/

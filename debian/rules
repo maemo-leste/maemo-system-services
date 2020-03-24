@@ -1,58 +1,8 @@
 #!/usr/bin/make -f
-# debian/rules for the maemo-system-services package.
-# Author: Scott James Remnant <scott@ubuntu.com>
+%:
+	dh $@
 
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
-
-export DH_OPTIONS
-
-# Install the package underneath debian/tmp
-install:
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-
-	cp -a session/* debian/maemo-system-services/etc/X11
-	cp -a dbus/* debian/maemo-system-services/etc/dbus-1
-	cp -a dh/dh_install* debian/maemo-system-services-dev/usr/bin
-	cp -a dh/postinst-* debian/maemo-system-services-dev/usr/share/debhelper/autoscripts/
-
-binary: binary-indep binary-arch
-
-# Build architecture-independent files here.
-binary-indep:
-# We have nothing to do by default.
-
-# Build architecture-dependent files here.
-binary-arch: DH_OPTIONS=-a
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_installchangelogs
-	dh_installdocs
-	dh_install --sourcedir=debian/tmp
-	dh_link
+override_dh_installinit:
 	dh_installinit --no-start --name=welcome
 	dh_installinit --no-start --name=xorg
 	dh_installinit --no-start --name=xsession
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-
-# Clean up the mess we made
-clean: clean-source
-clean-source:
-	dh_testdir
-	rm -f build-stamp
-	dh_clean 
-
-
-.PHONY: build install binary-indep binary-arch binary clean clean-source
