@@ -1,11 +1,12 @@
 #!/sbin/openrc-run
-
-description="Xorg Server"
-
-depend() {
-	need dsme
-	after bootmisc rsyslog
-}
+### BEGIN INIT INFO
+# Provides:          xorg
+# Required-Start:    $remote_fs $syslog bootmisc gpu dsme
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: Xorg Server
+### END INIT INFO
 
 start() {
     einfo "Starting Xorg Server" > /dev/console

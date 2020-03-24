@@ -1,11 +1,12 @@
 #!/sbin/openrc-run
-
-description="starting Xsession"
-
-depend() {
-	need xorg mce
-	keyword -timeout
-}
+### BEGIN INIT INFO
+# Provides:          xsession
+# Required-Start:    xorg mce
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: Starting Xsession
+### END INIT INFO
 
 start_pre() {
         DISPLAY=:0 /usr/sbin/waitx
