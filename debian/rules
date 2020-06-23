@@ -15,12 +15,12 @@ install:
 	dh_installdirs
 
 	# Copy across the default jobs
-	@set -x; for pkg in maemo-system-services; do \
-		for job in debian/init.d/$$pkg/*; do \
-		install -m 644 -o root -g root $$job \
-				debian/$$pkg/etc/init.d || exit 1; \
-		done; \
-	done
+	#@set -x; for pkg in maemo-system-services; do \
+	#	for job in debian/init.d/$$pkg/*; do \
+	#	install -m 644 -o root -g root $$job \
+	#			debian/$$pkg/etc/init.d || exit 1; \
+	#	done; \
+	#done
 	cp -a debian/session/* debian/maemo-system-services/etc/X11
 	cp -a debian/dbus/* debian/maemo-system-services/etc/dbus-1
 	cp -a debian/dh/dh_install* debian/maemo-system-services-dev/usr/bin
