@@ -1,5 +1,5 @@
 #!/sbin/openrc-run
 
 start() {
-	einfo "\nWelcome to your upstart powered internet tablet.\n"
+	einfo "Welcome to Maemo Leste"
 }
