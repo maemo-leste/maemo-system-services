@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Insert debian/maemo-icon.png into ${maemo:icon26} substition variable
+# for all binary packages for use in debian/control file.
+
+# Locate all package names
+# FIXME must be better way to do this?  Should handle -p for specific
+# package names.
+pkgs="$(awk '/^Package:/ {print $2}' debian/control)"
+
+icon=debian/maemo-icon.png
+if [ ! -e "$icon" ] ; then
+    echo "error: no icon file $icon available"
+    exit 1
+fi
+
+for pkg in $pkgs; do
+    substvars="debian/$pkg.substvars"
+    if grep -q ^maemo:icon26= "$substvars"; then
+	# Remove old entry if one exist already
+	grep -v ^maemo:icon26= "$substvars" \
+	     > $substvars.new && \
+	    mv $substvars.new "$substvars"
+    fi
+    echo maemo:icon26=\${Newline}$(base64 $icon | awk 1 ORS='${Newline}') \
+	 >> "$substvars"
+done
