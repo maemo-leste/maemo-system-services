@@ -1,3 +1,14 @@
+maemo-system-services (0.6.0-0) unstable; urgency=medium
+
+  * Add project link metadata to d/control.
+  * Updated debhelper from 9 to 12.
+  * Corrected author name of dh_installxsession.
+  * Add simple dh_maemo_icon helper.
+  * Remove obsolete upstart README.
+  * Simplify debian/rules file.
+
+ -- Ivan J. <parazyd@dyne.org>  Wed, 30 Sep 2020 16:42:54 +0200
+
 maemo-system-services (0.5.3-0) unstable; urgency=low
 
   * Do not override existing dbus sessions, reply on dbus-user instead
