@@ -4,6 +4,10 @@ Priority: extra
 Maintainer: Ivaylo Dimitrov <freemangordon@abv.bg>
 Build-Depends: debhelper
 Standards-Version: 3.7.3
+Homepage: https://github.com/maemo-leste/maemo-system-services
+XSBC-Bugtracker: https://github.com/maemo-leste/maemo-system-services/issues
+Vcs-Git: https://github.com/maemo-leste/maemo-system-services/
+Vcs-Browser: https://github.com/maemo-leste/maemo-system-services/
 
 Package: maemo-system-services-dev
 Architecture: any
