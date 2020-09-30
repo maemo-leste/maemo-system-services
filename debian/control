@@ -11,9 +11,9 @@ Vcs-Browser: https://github.com/maemo-leste/maemo-system-services/
 
 Package: maemo-system-services-dev
 Architecture: any
-Description: dh_installxsession tool
- This package contains a dh_installxsession a tool to simplify
- deploying X startup scripts
+Description: Maemo debhelper plugins
+ This package contains additional debhelper scripts that are
+ useful for Maemo packaging.
 
 Package: maemo-system-services
 Architecture: any
