@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# XXX: This is to cleanup the old unused initscript on the system.
+#      Note that the (upstart) initscript ran on the ACT_DEAD runlevel, so
+#      consider having a runlevel like this within our system (OpenRC).
+
+if [ -f /etc/init.d/actdead.conf ]; then
+	rm /etc/init.d/actdead.conf
+fi
+
+#DEBHELPER#
