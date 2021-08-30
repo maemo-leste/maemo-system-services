@@ -1,0 +1,65 @@
+#!/bin/sh
+set -e
+
+usage() {
+	echo "usage: dh_maemo_installicdnetwork libicd-network-tor libicd_network_tor.so" >&2
+	exit 1
+}
+
+if [ -z "$(which gconftool)" ]; then
+	echo "dh_maemo_installicdnetwork ERROR: gconftool not found" >&2
+	exit 1
+fi
+
+if [ -z "$1" ] || [ -z "$2" ]; then
+	usage
+fi
+
+pkgname="$1"
+sofile="$2"
+postinstfile="debian/${pkgname}.postinst.debhelper"
+postrmfile="debian/${pkgname}.postrm.debhelper"
+
+user="user"
+gconfpath="/system/osso/connectivity/network_type"
+gconfmods="network_modules"
+
+# postinst
+cat <<EOF >> "$postinstfile"
+network_types="\$(su "${user}" -c "gconftool --all-dirs $gconfpath" | xargs)"
+
+for net in \$network_types; do
+	modules="\$(su "${user}" -c "gconftool -g \$net/$gconfmods" | tr -d '[]')"
+
+	if echo "\${modules}" | grep -q "$sofile"; then
+		continue
+	fi
+
+	modules_in="\$modules,$sofile"
+
+	su "${user}" -c \
+		"gconftool -t list --list-type=string \
+			-s \$net/$gconfmods [\$modules_in]"
+done
+EOF
+
+# postrm
+cat <<EOF >> "$postrmfile"
+network_types="\$(su "${user}" -c "gconftool --all-dirs $gconfpath" | xargs)"
+
+for net in \$network_types; do
+	modules="\$(su "${user}" -c "gconftool -g \$net/$gconfmods" | tr -d '[]')"
+
+	if ! echo "\${modules}" | grep -q "$sofile"; then
+		continue
+	fi
+
+	modules_rm="\$(echo "\$modules" | sed "s/$sofile//")"
+	# Remove trailing comma if it's there
+	modules_rm="\$(echo "\$modules_rm" | sed 's/,$//')"
+
+	su "${user}" -c \
+		"gconftool -t list --list-type=string \
+			-s \$net/$gconfmods [\$modules_rm]"
+done
+EOF
