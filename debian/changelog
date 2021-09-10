@@ -1,3 +1,12 @@
+maemo-system-services (0.6.1-0) unstable; urgency=medium
+
+  * dh: Add debhelper script to install icd networks.
+  * Add GPL-2 license.
+  * Remove actdead.conf initscript and write a note about it.
+  * Reword -dev package description.
+
+ -- Ivan J. <parazyd@dyne.org>  Fri, 10 Sep 2021 21:43:44 +0200
+
 maemo-system-services (0.6.0-0) unstable; urgency=medium
 
   * Add project link metadata to d/control.
