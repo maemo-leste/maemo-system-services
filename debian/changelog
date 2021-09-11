@@ -1,3 +1,9 @@
+maemo-system-services (0.6.2-0) unstable; urgency=medium
+
+  * dh_maemo_installicdnetwork: Fixup to support explicit network types.
+
+ -- Ivan J. <parazyd@dyne.org>  Sat, 11 Sep 2021 07:45:26 +0200
+
 maemo-system-services (0.6.1-0) unstable; urgency=medium
 
   * dh: Add debhelper script to install icd networks.
