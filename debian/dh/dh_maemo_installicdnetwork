@@ -2,7 +2,7 @@
 set -e
 
 usage() {
-	echo "usage: dh_maemo_installicdnetwork libicd-network-tor libicd_network_tor.so" >&2
+	echo "usage: dh_maemo_installicdnetwork libicd-network-tor libicd_network_tor.so WLAN_INFRA DUMMY ..." >&2
 	exit 1
 }
 
@@ -11,12 +11,14 @@ if [ -z "$(which gconftool)" ]; then
 	exit 1
 fi
 
-if [ -z "$1" ] || [ -z "$2" ]; then
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
 	usage
 fi
 
 pkgname="$1"
-sofile="$2"
+shift
+sofile="$1"
+shift
 postinstfile="debian/${pkgname}.postinst.debhelper"
 postrmfile="debian/${pkgname}.postrm.debhelper"
 
@@ -29,6 +31,11 @@ cat <<EOF >> "$postinstfile"
 network_types="\$(su "${user}" -c "gconftool --all-dirs $gconfpath" | xargs)"
 
 for net in \$network_types; do
+	if ! echo "$@" | grep -q "\$(basename "\$net")"; then
+		echo "dh_maemo_installicdnetwork: Skipping \$net" >&2
+		continue
+	fi
+
 	modules="\$(su "${user}" -c "gconftool -g \$net/$gconfmods" | tr -d '[]')"
 
 	if echo "\${modules}" | grep -q "$sofile"; then
@@ -48,6 +55,11 @@ cat <<EOF >> "$postrmfile"
 network_types="\$(su "${user}" -c "gconftool --all-dirs $gconfpath" | xargs)"
 
 for net in \$network_types; do
+	if ! echo "$@" | grep -q "\$(basename "\$net")"; then
+		echo "dh_maemo_installicdnetwork: Skipping \$net" >&2
+		continue
+	fi
+
 	modules="\$(su "${user}" -c "gconftool -g \$net/$gconfmods" | tr -d '[]')"
 
 	if ! echo "\${modules}" | grep -q "$sofile"; then
