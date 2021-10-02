@@ -10,6 +10,35 @@ from os.path import basename
 GCONF_NETWORK_TYPES = '/system/osso/connectivity/network_type'
 GCONF_NETWORK_TYPE_MODULES = '/system/osso/connectivity/network_type/%s/network_modules'
 
+
+LIBICD_NETWORK_WIREGUARD = 'libicd_network_wireguard.so'
+LIBICD_NETWORK_OPENVPN = 'libicd_network_openvpn.so'
+LIBICD_NETWORK_TOR = 'libicd_network_tor.so'
+
+def check_modules_order(modules):
+    # Place libicd_network_tor.sh after libicd_network_wireguard and
+    # libicd_network_openvpn
+
+    if LIBICD_NETWORK_TOR in modules:
+        tor_idx = modules.index(LIBICD_NETWORK_TOR)
+        if LIBICD_NETWORK_WIREGUARD in modules:
+            wg_idx = modules.index(LIBICD_NETWORK_WIREGUARD)
+
+            if wg_idx > tor_idx:
+                modules.remove(LIBICD_NETWORK_TOR)
+                modules.append(LIBICD_NETWORK_TOR)
+
+        tor_idx = modules.index(LIBICD_NETWORK_TOR)
+        if LIBICD_NETWORK_OPENVPN in modules:
+            openvpn_idx = modules.index(LIBICD_NETWORK_OPENVPN)
+
+            if openvpn_idx > tor_idx:
+                modules.remove(LIBICD_NETWORK_TOR)
+                modules.append(LIBICD_NETWORK_TOR)
+
+    return modules
+
+
 def main(add, module, network_types, verbose):
     client = gconf.client_get_default()
 
@@ -58,6 +87,7 @@ def main(add, module, network_types, verbose):
                 else:
                     print('Module %s already removed for network_type %s' % (module, net_type), file=sys.stderr)
 
+            modules = check_modules_order(modules)
             client.set_list(p, gconf.VALUE_STRING, modules)
 
     return 0
