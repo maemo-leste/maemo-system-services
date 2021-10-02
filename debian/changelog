@@ -1,3 +1,9 @@
+maemo-system-services (0.6.3-0) unstable; urgency=medium
+
+  * dh_maemo_installicdnetwork: Rewrite in python to solve various bugs
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Sat, 02 Oct 2021 18:38:42 +0200
+
 maemo-system-services (0.6.2-0) unstable; urgency=medium
 
   * dh_maemo_installicdnetwork: Fixup to support explicit network types.
