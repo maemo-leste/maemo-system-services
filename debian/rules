@@ -7,6 +7,7 @@ override_dh_install:
 	cp -a debian/session/* debian/maemo-system-services/etc/X11
 	cp -a debian/dbus/* debian/maemo-system-services/etc/dbus-1
 	cp -a debian/dh/dh_* debian/maemo-system-services-dev/usr/bin
+	cp -a debian/scripts/* debian/maemo-system-services-dev/usr/bin
 	cp -a debian/dh/postinst-* debian/maemo-system-services-dev/usr/share/debhelper/autoscripts/
 
 override_dh_installinit:

@@ -28,50 +28,12 @@ gconfmods="network_modules"
 
 # postinst
 cat <<EOF >> "$postinstfile"
-network_types="\$(su "${user}" -c "gconftool --all-dirs $gconfpath" | xargs)"
-
-for net in \$network_types; do
-	if ! echo "$@" | grep -q "\$(basename "\$net")"; then
-		echo "dh_maemo_installicdnetwork: Skipping \$net" >&2
-		continue
-	fi
-
-	modules="\$(su "${user}" -c "gconftool -g \$net/$gconfmods" | tr -d '[]')"
-
-	if echo "\${modules}" | grep -q "$sofile"; then
-		continue
-	fi
-
-	modules_in="\$modules,$sofile"
-
-	su "${user}" -c \
-		"gconftool -t list --list-type=string \
-			-s \$net/$gconfmods [\$modules_in]"
-done
+net_args="-n \$(echo $@ | sed 's/ / -n /g')"
+su ${user} -c "icd2-manage-modules -a add -m $sofile \$net_args"
 EOF
 
 # postrm
 cat <<EOF >> "$postrmfile"
-network_types="\$(su "${user}" -c "gconftool --all-dirs $gconfpath" | xargs)"
-
-for net in \$network_types; do
-	if ! echo "$@" | grep -q "\$(basename "\$net")"; then
-		echo "dh_maemo_installicdnetwork: Skipping \$net" >&2
-		continue
-	fi
-
-	modules="\$(su "${user}" -c "gconftool -g \$net/$gconfmods" | tr -d '[]')"
-
-	if ! echo "\${modules}" | grep -q "$sofile"; then
-		continue
-	fi
-
-	modules_rm="\$(echo "\$modules" | sed "s/$sofile//")"
-	# Remove trailing comma if it's there
-	modules_rm="\$(echo "\$modules_rm" | sed 's/,$//')"
-
-	su "${user}" -c \
-		"gconftool -t list --list-type=string \
-			-s \$net/$gconfmods [\$modules_rm]"
-done
+net_args="-n \$(echo $@ | sed 's/ / -n /g')"
+su ${user} -c "icd2-manage-modules -a del -m $sofile \$net_args"
 EOF

@@ -1,0 +1,78 @@
+#!/usr/bin/env python2
+from __future__ import print_function
+
+import argparse
+import gconf
+import sys
+from os.path import basename
+
+
+GCONF_NETWORK_TYPES = '/system/osso/connectivity/network_type'
+GCONF_NETWORK_TYPE_MODULES = '/system/osso/connectivity/network_type/%s/network_modules'
+
+def main(add, module, network_types, verbose):
+    client = gconf.client_get_default()
+
+    net_types = map(basename, client.all_dirs(GCONF_NETWORK_TYPES))
+
+    if verbose:
+        print('Found the following net_types:', net_types)
+
+    for net_type in network_types:
+        if net_type not in net_types:
+            print('ERROR: requested network_type %s does not exist in %s (%s)' % (net_type, GCONF_NETWORK_TYPES, net_types))
+            return 1
+
+    for net_type in net_types:
+        if net_type in network_types:
+            if verbose:
+                print('net_type %s was requested' % net_type)
+
+            p = GCONF_NETWORK_TYPE_MODULES % net_type
+            modules_unf = client.get_list(p, list_type=gconf.VALUE_STRING)
+
+            # Recover from bad states introduced by previous shell-based script
+            # Filter any empty entries
+            modules = list(filter(lambda x: bool(x), modules_unf))
+            if len(modules_unf) != len(modules):
+                print('Detected bad config for network_type %s. Fixing...' % net_type, file=sys.stderr)
+
+            if len(modules) < 1:
+                print('Detected empty config for network_type %s. Fixing...' % net_type, file=sys.stderr)
+                v = client.get_default_from_schema(GCONF_NETWORK_TYPE_MODULES % net_type)
+                modules = map(lambda x: x.to_string(), v.get_list())
+
+
+            if add:
+                if module not in modules:
+                    if verbose:
+                        print('Module %s not yet present for network_type %s' % (module, net_type))
+                    modules.append(module)
+                else:
+                    print('Module %s already present for network_type %s' % (module, net_type), file=sys.stderr)
+            else:
+                if module in modules:
+                    if verbose:
+                        print('Module %s present for network_type %s' % (module, net_type))
+                    modules.remove(module)
+                else:
+                    print('Module %s already removed for network_type %s' % (module, net_type), file=sys.stderr)
+
+            client.set_list(p, gconf.VALUE_STRING, modules)
+
+    return 0
+
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='ICD2 network type module manager')
+    parser.add_argument('-a', '--action', type=str, default=None, required=True,
+                        choices=['add', 'del',])
+    parser.add_argument('-m', '--module', type=str, default=None, required=True)
+    parser.add_argument('-n', '--network-type', default=None, action='append',
+                        required=True)
+    parser.add_argument('--verbose', default=False, action='store_true')
+
+    args = parser.parse_args()
+
+    sys.exit(main(args.action == 'add', args.module, args.network_type, args.verbose))

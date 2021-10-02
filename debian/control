@@ -11,6 +11,7 @@ Vcs-Browser: https://github.com/maemo-leste/maemo-system-services/
 
 Package: maemo-system-services-dev
 Architecture: any
+Depends: python-gconf
 Description: Maemo debhelper plugins
  This package contains additional debhelper scripts that are
  useful for Maemo packaging.
