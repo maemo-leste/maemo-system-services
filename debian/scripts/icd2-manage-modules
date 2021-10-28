@@ -49,8 +49,8 @@ def main(add, module, network_types, verbose):
 
     for net_type in network_types:
         if net_type not in net_types:
-            print('ERROR: requested network_type %s does not exist in %s (%s)' % (net_type, GCONF_NETWORK_TYPES, net_types))
-            return 1
+            print('WARNING: requested network_type %s does not exist in %s (%s)' % (net_type, GCONF_NETWORK_TYPES, net_types), file=sys.stderr)
+            continue
 
     for net_type in net_types:
         if net_type in network_types:
