@@ -1,3 +1,10 @@
+maemo-system-services (0.6.4-0) unstable; urgency=medium
+
+  * icd2-manage-modules: make network type not existing not fatal
+  * xsession: depend on ofono
+
+ -- Ivan J. <parazyd@dyne.org>  Thu, 28 Oct 2021 18:04:18 +0200
+
 maemo-system-services (0.6.3-0) unstable; urgency=medium
 
   * dh_maemo_installicdnetwork: Rewrite in python to solve various bugs
