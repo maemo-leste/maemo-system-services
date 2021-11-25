@@ -3,7 +3,8 @@
 description="starting Xsession"
 
 depend() {
-	need xorg mce ofono
+	need xorg mce
+	use ofono
 	keyword -timeout
 }
 
