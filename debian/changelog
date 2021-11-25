@@ -1,3 +1,9 @@
+maemo-system-services (0.6.5-0) unstable; urgency=medium
+
+  * xsession: remove hard dependency on ofono
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Thu, 25 Nov 2021 13:41:52 +0100
+
 maemo-system-services (0.6.4-0) unstable; urgency=medium
 
   * icd2-manage-modules: make network type not existing not fatal
