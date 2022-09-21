@@ -4,7 +4,7 @@ description="starting Xsession"
 
 depend() {
 	need xorg mce
-	use ofono
+	after ofono icd2
 	keyword -timeout
 }
 
