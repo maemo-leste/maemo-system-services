@@ -73,4 +73,4 @@ if [ -n "$SESSIONFILES" ]; then
   set -e
 fi
 
-exit 0
+while :; do sleep infinity; done

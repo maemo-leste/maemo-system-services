@@ -18,7 +18,7 @@ Description: Maemo debhelper plugins
 
 Package: maemo-system-services
 Architecture: any
-Depends: sysv-rc | openrc
+Depends: sysv-rc | openrc, autologin, xinit
 Description: definitions of essential maemo system services
  This package contains the definitions of services essential for the
  normal operation of a Maemo system.

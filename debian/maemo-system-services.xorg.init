@@ -3,18 +3,16 @@
 description="Xorg Server"
 
 depend() {
-	need dsme
-	after bootmisc rsyslog
+	need dsme mce
+	after bootmisc rsyslog ofono icd2
+	keyword -timeout
+	provide xsession
 }
 
 start() {
     einfo "Starting Xorg Server" > /dev/console
-    XORG_OPTIONS="-logfile /tmp/Xorg.0.log -logverbose 1 -nolisten tcp -noreset -s 0 -core"
-    /usr/sbin/dsmetool -n -8 -r "/usr/bin/Xorg $XORG_OPTIONS"
-}
-
-start_post() {
-    DISPLAY=:0 /usr/sbin/waitx
+    XORG_OPTIONS="-keeptty -logfile /tmp/Xorg.0.log -logverbose 1 -noreset -s 0 -core"
+    /usr/sbin/dsmetool -n -8 -r "autologin user startx -- $XORG_OPTIONS"
 }
 
 stop_post() {
