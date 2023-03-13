@@ -11,12 +11,12 @@ depend() {
 
 start() {
     einfo "Starting Xorg Server" > /dev/console
-    XORG_OPTIONS="-keeptty -logfile /tmp/Xorg.0.log -logverbose 1 -noreset -s 0 -core"
+    XORG_OPTIONS="-keeptty -logverbose 1 -noreset -s 0 -core"
     /usr/sbin/dsmetool -n -8 -r "autologin user startx -- $XORG_OPTIONS"
 }
 
 stop_post() {
     if [ -d /home/user ]; then
-	cp /tmp/Xorg.0.log /home/user
+	cp /var/log/Xorg.0.log /home/user
     fi
 }
