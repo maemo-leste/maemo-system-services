@@ -1,5 +1,12 @@
 #!/bin/sh
 # Xsession user settings
+
+for profile in /etc/profile "$HOME"/.profile; do
+    if [ -f "$profile" ]; then
+        . "$profile"
+    fi
+done
+
 . /etc/osso-af-init/af-defines.sh
 . /etc/osso-af-init/osso-gtk.defs
 
