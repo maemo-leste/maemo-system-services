@@ -1,3 +1,10 @@
+maemo-system-services (0.6.9-0) unstable; urgency=low
+
+  * 00settings: allow all local users to access display
+  * xorg.init: we don't really need mce, but rather want to start after it
+
+ -- Ivaylo Dimitrov <ivo.g.dimitrov.75@gmail.com>  Wed, 15 Mar 2023 07:03:43 +0200
+
 maemo-system-services (0.6.8-0) unstable; urgency=low
 
   * xorg.init: logfile location cannot be set, use default
