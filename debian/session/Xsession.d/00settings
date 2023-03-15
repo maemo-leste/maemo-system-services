@@ -1,6 +1,9 @@
 #!/bin/sh
 # Xsession user settings
 
+#allow all local users to access display
+xhost +local:
+
 for profile in /etc/profile "$HOME"/.profile; do
     if [ -f "$profile" ]; then
         . "$profile"
