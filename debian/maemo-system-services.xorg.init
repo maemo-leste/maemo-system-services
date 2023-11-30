@@ -4,7 +4,7 @@ description="Xorg Server"
 
 depend() {
 	need dsme
-	after bootmisc rsyslog mce ofono icd2
+	after bootmisc rsyslog mce ofono icd2 pulseaudio-enable-autospawn
 	keyword -timeout
 	provide xsession
 }
