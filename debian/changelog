@@ -1,3 +1,9 @@
+maemo-system-services (0.6.11-0) unstable; urgency=low
+
+  * xorg.init: start after pulseaudio-enable-autospawn
+
+ -- Ivaylo Dimitrov <ivo.g.dimitrov.75@gmail.com>  Tue, 30 Nov 2022 19:02:13 +0200
+
 maemo-system-services (0.6.10-0) unstable; urgency=low
 
   * xorg.init:  xorg.init: set XDG_SESSION_TYPE
