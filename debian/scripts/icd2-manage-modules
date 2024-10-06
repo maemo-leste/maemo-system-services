@@ -1,10 +1,10 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 from __future__ import print_function
 
 import argparse
-import gconf
 import sys
 from os.path import basename
+from subprocess import check_output, check_call
 
 
 GCONF_NETWORK_TYPES = '/system/osso/connectivity/network_type'
@@ -39,10 +39,12 @@ def check_modules_order(modules):
     return modules
 
 
-def main(add, module, network_types, verbose):
-    client = gconf.client_get_default()
+def get_net_modules(key):
+    return check_output(['gconftool-2', '--get', key]).decode('utf-8').strip()[1:-1].split(',')
 
-    net_types = map(basename, client.all_dirs(GCONF_NETWORK_TYPES))
+def main(add, module, network_types, verbose):
+    net_types = filter(lambda x: x, check_output(['gconftool-2', '--all-dirs', GCONF_NETWORK_TYPES]).decode('utf-8').split('\n'))
+    net_types = [basename(x.strip()) for x in net_types]
 
     if verbose:
         print('Found the following net_types:', net_types)
@@ -58,7 +60,7 @@ def main(add, module, network_types, verbose):
                 print('net_type %s was requested' % net_type)
 
             p = GCONF_NETWORK_TYPE_MODULES % net_type
-            modules_unf = client.get_list(p, list_type=gconf.VALUE_STRING)
+            modules_unf = get_net_modules(p)
 
             # Recover from bad states introduced by previous shell-based script
             # Filter any empty entries
@@ -68,9 +70,8 @@ def main(add, module, network_types, verbose):
 
             if len(modules) < 1:
                 print('Detected empty config for network_type %s. Fixing...' % net_type, file=sys.stderr)
-                v = client.get_default_from_schema(GCONF_NETWORK_TYPE_MODULES % net_type)
-                modules = map(lambda x: x.to_string(), v.get_list())
-
+                check_call(['gconftool-2', '--unset', p])
+                modules = get_net_modules(p)
 
             if add:
                 if module not in modules:
@@ -88,7 +89,7 @@ def main(add, module, network_types, verbose):
                     print('Module %s already removed for network_type %s' % (module, net_type), file=sys.stderr)
 
             modules = check_modules_order(modules)
-            client.set_list(p, gconf.VALUE_STRING, modules)
+            check_call(['gconftool-2', '--set', p, '--type', 'list', '--list-type', 'string', '[' + ','.join(modules) + ']'])
 
     return 0
 
