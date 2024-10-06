@@ -1,3 +1,9 @@
+maemo-system-services (0.6.12-0) unstable; urgency=low
+
+  * icd2-manage-modules: switch to python3 and gconf2
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Mon, 07 Oct 2024 00:33:09 +0200
+
 maemo-system-services (0.6.11-0) unstable; urgency=low
 
   * xorg.init: start after pulseaudio-enable-autospawn
