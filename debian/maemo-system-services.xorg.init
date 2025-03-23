@@ -12,7 +12,17 @@ depend() {
 start() {
     einfo "Starting Xorg Server" > /dev/console
     XORG_OPTIONS="-logverbose 1 -noreset -s 0 -core"
-    XDG_SESSION_TYPE=x11 /usr/sbin/dsmetool -n -8 -r "autologin user startx -- $XORG_OPTIONS"
+    XDG_SESSION_TYPE=x11 /usr/sbin/dsmetool -r "autologin user startx -- $XORG_OPTIONS"
+
+    while true; do
+	PID=$(pgrep -f /usr/lib/xorg/Xorg)
+	if [ ! -z "$PID" ]; then
+	    renice -n -8 -p "$PID"
+	    break
+	fi
+
+	sleep 1
+    done
 }
 
 stop_post() {
