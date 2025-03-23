@@ -1,3 +1,11 @@
+maemo-system-services (0.6.13-1) unstable; urgency=low
+
+  * xorg init script: do not try to start after icd2
+  * xorg init script: copy log file from correct location
+  * xorg init script: set Xorg niceness to -8
+
+ -- Ivaylo Dimitrov <ivo.g.dimitrov.75@gmail.com>  Sun, 23 Mar 2025 09:23:54 +0200
+
 maemo-system-services (0.6.12-0) unstable; urgency=low
 
   * icd2-manage-modules: switch to python3 and gconf2
