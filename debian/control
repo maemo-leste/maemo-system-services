@@ -1,9 +1,9 @@
 Source: maemo-system-services
 Section: admin
-Priority: extra
+Priority: optional
 Maintainer: Ivaylo Dimitrov <freemangordon@abv.bg>
 Build-Depends: debhelper (>= 12)
-Standards-Version: 3.7.3
+Standards-Version: 4.5.1
 Homepage: https://github.com/maemo-leste/maemo-system-services
 XSBC-Bugtracker: https://github.com/maemo-leste/maemo-system-services/issues
 Vcs-Git: https://github.com/maemo-leste/maemo-system-services/
@@ -11,14 +11,14 @@ Vcs-Browser: https://github.com/maemo-leste/maemo-system-services/
 
 Package: maemo-system-services-dev
 Architecture: any
-Depends: gconf2, python3-minimal
+Depends: gconf2, python3-minimal, ${misc:Depends}
 Description: Maemo debhelper plugins
  This package contains additional debhelper scripts that are
  useful for Maemo packaging.
 
 Package: maemo-system-services
 Architecture: any
-Depends: sysv-rc | openrc, autologin, xinit
+Depends: sysv-rc | openrc, autologin, xinit, ${misc:Depends}
 Description: definitions of essential maemo system services
  This package contains the definitions of services essential for the
  normal operation of a Maemo system.
