@@ -17,6 +17,6 @@ start() {
 
 stop_post() {
     if [ -d /home/user ]; then
-	cp /var/log/Xorg.0.log /home/user
+	cp /home/user/.local/share/xorg/Xorg.0.log /home/user
     fi
 }
