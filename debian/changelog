@@ -1,3 +1,9 @@
+maemo-system-services (0.6.14-1) unstable; urgency=low
+
+  * Add iio-sensor-proxy init script
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Tue, 20 May 2025 13:19:22 +0200
+
 maemo-system-services (0.6.13-1) unstable; urgency=low
 
   * xorg init script: do not try to start after icd2
