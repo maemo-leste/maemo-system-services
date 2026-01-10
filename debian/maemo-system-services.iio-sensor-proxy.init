@@ -7,12 +7,12 @@ depend() {
 
 start() {
         ebegin "Starting iio-sensor-deamon"
-        start-stop-daemon --start --background --exec /usr/sbin/iio-sensor-proxy
+        start-stop-daemon --start --background --exec /usr/libexec/iio-sensor-proxy
         eend $?
 }
 
 stop() {
         ebegin "Stopping iio-sensor-deamon"
-        start-stop-daemon --stop --quiet --exec /usr/sbin/iio-sensor-proxy
+        start-stop-daemon --stop --quiet --exec /usr/libexec/iio-sensor-proxy
         eend $?
 }
