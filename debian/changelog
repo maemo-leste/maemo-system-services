@@ -1,3 +1,9 @@
+maemo-system-services (0.6.15-1) unstable; urgency=low
+
+  * Update iio-sensor-proxy init script
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Sat, 10 Jan 2026 12:40:08 +0100
+
 maemo-system-services (0.6.14-1) unstable; urgency=low
 
   * Add iio-sensor-proxy init script
